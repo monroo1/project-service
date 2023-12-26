@@ -1,0 +1,22 @@
+.ArrowButton {
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+
+    &:hover {
+        border-color: var(--secondary-color);
+    }
+
+    &.inverted {
+        background-color: #fff;
+        border: none;
+
+        &:hover {
+            background-color: var(--secondary-color);
+
+            & path{
+                fill: #fff;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

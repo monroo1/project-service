@@ -1,0 +1,100 @@
+.text {
+    font-weight: 500;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.size_s {
+    .text {
+        font: var(--font-text-s);
+    }
+
+    .title {
+        font: var(--font-title-s);
+    }
+}
+
+.size_m {
+    .text {
+        font: var(--font-text-m);
+    }
+
+    .title {
+        font: var(--font-title-m);
+        font-weight: 600;
+    }
+}
+
+.size_l {
+    .text {
+        font: var(--font-text-l);
+    }
+
+    .title {
+        font: var(--font-title-l);
+        font-weight: 600;
+    }
+}
+
+.size_xl {
+    .text {
+        font: var(--font-text-xl);
+    }
+
+    .title {
+        font: var(--font-title-xl);
+        font-weight: 600;
+    }
+}
+
+
+.size_xxl {
+    .text {
+        font: var(--font-text-xxl);
+        font-weight: 600;
+    }
+
+    .title {
+        font: var(--font-title-xxl);
+        font-weight: 700;
+    }
+}
+
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.thin {
+    .title, .text {
+        font-weight: 400;
+    }
+}
+
+.bold {
+    .title, .text {
+        font-weight: 700;
+    }
+}
+
+.Releway {
+    .title, .text {
+        font-family: var(--font-family-main);
+    }
+}
+
+.Lato {
+    .title, .text {
+        font-family: var(--font-family-title);
+    }
+}

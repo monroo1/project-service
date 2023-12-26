@@ -1,0 +1,56 @@
+@import 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap';
+
+:root {
+	// Цвета
+	--text-color: #282B22;
+	--primary-color: #3D4A39;
+	--secondary-color: #AE7B3C;
+	--grey-color: #F3F3F3;
+
+	// z indexes
+	--z-modal: -1;
+	--z-modal-opened: 1000;
+	--z-dropdown: 100;
+	--z-listbox: 100;
+	--z-sidebar: 10;
+	--z-overlay: -1;
+
+	// fonts-family
+	--font-family-main: 'Raleway', sans-serif;
+	--font-family-title: 'Lato', sans-serif;
+
+	// font-size
+	--font-size-xxl-title: 56px;
+	--font-size-xl-title: 46px;
+	--font-size-l-title: 36px;
+	--font-size-m-title: 32px;
+	--font-size-s-title: 28px;
+	--font-size-xs-title: 24px;
+	--font-size-xxl: 20px;
+	--font-size-xl: 18px;
+	--font-size-l: 15px;
+	--font-size-m: 14px;
+	--font-size-s: 12px;
+
+	// font line height
+	--font-line-xxl: 150%;
+	--font-line-xl: 145%;
+	--font-line-l: 140%;
+	--font-line-m: 135%;
+	--font-line-s: 130%;
+	--font-line-xs: 125%;
+	--font-line-xxs: 120%;
+	--font-line-default: 100%;
+
+	// fonts
+	--font-title-xxl: var(--font-size-xxl-title) / var(--font-line-xxs) var(--font-family-title);
+	--font-title-xl: var(--font-size-xl-title) / var(--font-line-xs) var(--font-family-main);
+	--font-title-l: var(--font-size-l-title) / var(--font-line-s) var(--font-family-main);
+	--font-title-m: var(--font-size-m-title) / var(--font-line-s) var(--font-family-main);
+	--font-title-s: var(--font-size-xs-title) / var(--font-line-s) var(--font-family-main);
+	--font-text-xxl: var(--font-size-xxl) / var(--font-line-default) var(--font-family-title);
+	--font-text-xl: var(--font-size-xl) / var(--font-line-xs) var(--font-family-main);
+	--font-text-l: var(--font-size-l) / var(--font-line-m) var(--font-family-main);
+	--font-text-m: var(--font-size-m) / var(--font-line-default) var(--font-family-main);
+	--font-text-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+}

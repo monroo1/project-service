@@ -1,0 +1,27 @@
+.Icon {
+    color: var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+
+    &.inverted {
+        color: var(--text-color);
+    }
+}
+
+.button {
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.button:hover .Icon{
+    color: var(--text-color);
+
+    &.inverted {
+        color: var(--secondary-color);
+    }
+}

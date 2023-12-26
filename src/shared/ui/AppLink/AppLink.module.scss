@@ -1,0 +1,9 @@
+.AppLink {
+    font: var(--font-text-l);
+    font-weight: 500;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
