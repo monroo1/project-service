@@ -1,0 +1,32 @@
+.StagesWork {
+    background: var(--primary-color);
+
+    .content {
+        gap: 80px;
+        padding: 100px 20px;
+        color: white;
+    }
+
+    .item {
+        flex: 1 1 20%;
+
+        & > div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+
+            border: 1px solid rgb(218 219 216 / 30%);
+            border-radius: 50%;
+
+            
+        }
+
+        & div:last-child {
+            color: rgb(255 255 255 / 60%)
+        }
+    }
+}

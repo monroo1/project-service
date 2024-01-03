@@ -1,0 +1,28 @@
+.FirstScreen {
+    position: relative;
+
+    min-height: 687px;
+    padding-top: 20vh;
+
+    
+    background-image: url("../../../shared/assets/background/firstScreen.jpeg");
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    background-size: cover;
+
+    .gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgb(0 0 0 / 20%) -13.19%, rgb(0 0 0 / 85%) 94.01%);
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+
+        max-width: 45vw;
+
+        color: white;
+        text-align: center;
+    }
+}
