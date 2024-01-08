@@ -12,7 +12,7 @@ export const StagesWork = memo((props: StagesWorkProps) => {
     const { className } = props;
 
     return (
-        <section className={cls.StagesWork}>
+        <section className={cls.StagesWork} id="stagesWork">
             <VStack
                 align="center"
                 className={classNames(cls.content, {}, [className, "wrapper"])}

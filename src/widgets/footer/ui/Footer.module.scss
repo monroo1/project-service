@@ -1,0 +1,20 @@
+.Footer {
+    padding: 100px 20px 0;
+    padding-top: 100px;
+
+    .bottom {
+        margin-top: 100px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        border-top: 1px solid rgb(40 43 34 / 20%);
+
+        & p {
+            color: var(--text-color);
+            opacity: 0.5;
+        }
+    }
+
+    .phone {
+        color: var(--primary-color);
+    }
+}

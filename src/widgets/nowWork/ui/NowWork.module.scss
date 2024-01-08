@@ -1,0 +1,77 @@
+.NowWork {
+    position: relative;
+    max-width: 100svw;
+    padding-top: 140px;
+
+    .swp {
+        max-width: 100%;
+    }
+
+    .element {
+        width: 600px;
+    }
+
+    .notActive {
+        opacity: 0.5;
+    }
+
+    .prevArrow {
+        position: absolute;
+        z-index: 100; 
+        top: 50%;
+        left: calc((100svw - 600px) / 2 - 124px);
+        rotate: 180deg;
+
+        width: 60px;
+        height: 60px;
+
+        & svg {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .nextArrow {
+        position: absolute;
+        z-index: 100; 
+        top: 50%;
+        right: calc((100svw - 600px) / 2 - 120px);
+
+        width: 60px;
+        height: 60px;
+
+        & svg {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (width <= 850px) {
+    .NowWork {
+        .element {
+            width: 100svw;
+
+            & > div {
+                max-width: 100%;
+
+                & > div {
+                    width: 100%;
+                }
+            }
+        }
+
+        .nextArrow {
+            right: 10px;
+        }
+
+        .prevArrow {
+            left: 10px;
+        }
+
+        & h5 {
+            padding: 0 20px;
+        }
+    }
+    
+}

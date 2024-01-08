@@ -1,9 +1,11 @@
-import { memo } from "react";
+"use client";
+import { memo, useCallback } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./FirstScreen.module.scss";
-import { VStack, getStack } from "@/shared/ui/Stack";
+import { VStack } from "@/shared/ui/Stack";
 import { Button } from "@/shared/ui/Button";
 import { Text } from "@/shared/ui/Text";
+import { useRouter } from "next/navigation";
 
 interface FirstScreenProps {
     className?: string;
@@ -11,6 +13,11 @@ interface FirstScreenProps {
 
 export const FirstScreen = memo((props: FirstScreenProps) => {
     const { className } = props;
+    const router = useRouter();
+
+    const handleRouteToForm = useCallback(() => {
+        router.push("/#form");
+    }, []);
 
     return (
         <section className={classNames(cls.FirstScreen, {}, [className])}>
@@ -27,7 +34,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                     size="xl"
                     align="center"
                 />
-                <Button>Обсудить проект</Button>
+                <Button onClick={handleRouteToForm}>Обсудить проект</Button>
             </VStack>
             <div className={cls.gradient} />
         </section>

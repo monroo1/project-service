@@ -1,11 +1,13 @@
 .Input {
     width: 300px;
     height: 33px;
+    padding-bottom: 10px;
 
     font: var(--font-text-l);
     font-weight: 600;
     color: #fff;
 
+    background: transparent;
     border: none;
     border-bottom: 2px solid var(--grey-color);
     outline: none;
@@ -14,5 +16,9 @@
         font: var(--font-text-l);
         font-weight: 500;
         opacity: 0.5;
+    }
+
+    &.invalid {
+        color: red
     }
 }

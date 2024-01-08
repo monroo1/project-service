@@ -1,15 +1,15 @@
-import { ReactNode, memo } from "react";
+import { ButtonHTMLAttributes, ReactNode, memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Button.module.scss";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     children: ReactNode;
     max?: boolean;
 }
 
 export const Button = memo((props: ButtonProps) => {
-    const { className, children, max = false } = props;
+    const { className, children, max = false, ...otherProps } = props;
 
     return (
         <button
@@ -20,6 +20,7 @@ export const Button = memo((props: ButtonProps) => {
                 },
                 [className],
             )}
+            {...otherProps}
         >
             {children}
         </button>

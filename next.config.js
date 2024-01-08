@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "**",
+            },
+        ],
+    },
+
     reactStrictMode: true,
     webpack(config) {
         config.module.rules = config.module?.rules?.map((rule) => {

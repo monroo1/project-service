@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./About.module.scss";
-import { HStack, VStack, getStack } from "@/shared/ui/Stack";
+import { HStack, getStack } from "@/shared/ui/Stack";
 import { Icon } from "@/shared/ui/Icon";
 import { Text } from "@/shared/ui/Text";
 import ListIcon from "@/shared/assets/icons/List.svg";
@@ -20,6 +20,7 @@ export const About = memo((props: AboutProps) => {
                 "wrapper",
                 getStack({ direction: "column" }),
             ])}
+            id="about"
         >
             <Text
                 title="Проект Сервис – создан выполнять объектные задачи комплексной меблировки жилых и коммерческих помещений."

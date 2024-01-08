@@ -1,0 +1,32 @@
+.Feedback {
+    padding: 0 20px;
+    background: var(--primary-color);
+}
+
+.content {
+    gap: 34px;
+
+    & > div:first-child {
+        padding: 100px 0;
+    }
+
+    & h2 {
+        color: white;
+    }
+
+    & > div:first-child > div:nth-child(2) >  p {
+        width: 300px;
+        color: white;
+    }
+
+    .imageWrapper {
+        position: relative;
+        flex-grow: 1;
+        align-self: stretch;
+
+        & img {
+            object-fit: cover;
+        }
+    }
+
+}

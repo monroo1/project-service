@@ -18,6 +18,7 @@ export const Directions = memo((props: DirectionsProps) => {
     return (
         <section
             className={classNames(cls.Directions, {}, [className, "wrapper"])}
+            id="directions"
         >
             <Text
                 title="Наши направления"

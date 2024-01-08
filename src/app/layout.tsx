@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import "./styles/main.scss";
 import { Header } from "@/widgets/header";
+import { FirstScreen } from "@/widgets/firstScreen";
+import { Footer } from "@/widgets/footer";
+import Providers from "./providers";
+import "./styles/main.scss";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -16,7 +19,9 @@ export default function RootLayout({
         <html lang="ru">
             <body>
                 <Header />
-                {children}
+                <FirstScreen />
+                <Providers>{children}</Providers>
+                <Footer />
             </body>
         </html>
     );

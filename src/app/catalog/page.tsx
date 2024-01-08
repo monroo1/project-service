@@ -1,14 +1,9 @@
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { Catalog } from "@/widgets/catalog";
 
-interface PageProps {
-    className?: string;
+export default function Page() {
+    return (
+        <main>
+            <Catalog />
+        </main>
+    );
 }
-
-const Page = memo((props: PageProps) => {
-    const { className } = props;
-
-    return <div className={classNames("", {}, [className])}>catalog</div>;
-});
-
-export default Page;

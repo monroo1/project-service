@@ -1,5 +1,5 @@
 "use client";
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { Icon } from "../Icon";
 import ArrowIcon from "../../assets/icons/Arrow.svg";
 import cls from "./ArrowButton.module.scss";
@@ -13,7 +13,7 @@ interface ArrowButtonProps {
 export const ArrowButton = memo((props: ArrowButtonProps) => {
     const { className, fill = false } = props;
 
-    const handleClick = () => console.log("click");
+    const handleClick = () => console.log("1");
 
     return (
         <Icon

@@ -16,6 +16,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
     return (
         <section
             className={classNames(cls.Advantages, {}, [className, "wrapper"])}
+            id="advantages"
         >
             <Text title="Наши преимущества" size="xl" align="center" />
             <VStack gap="24">

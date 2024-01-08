@@ -1,0 +1,25 @@
+.SendForm {
+    margin-top: 20px;
+
+    & button {
+        margin-top: 20px;
+    }
+}
+
+.thanks {
+    margin-top: 60px;
+    color: white;
+
+    & button {
+        margin-top: 80px;
+    }
+}
+
+.personalData {
+    max-width: 300px;
+    color: white;
+
+    & circle {
+        color: white;
+    }
+}
