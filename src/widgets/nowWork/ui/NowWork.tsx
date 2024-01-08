@@ -50,9 +50,7 @@ export const NowWork = memo((props: NowWorkProps) => {
             ])}
         >
             <Text title="Сейчас в работе" size="xl" />
-            {isLoading ? (
-                <div>Загрузка...</div>
-            ) : (
+            {!isLoading && !!response ? (
                 <>
                     <Swiper
                         modules={[A11y, Navigation]}
@@ -92,6 +90,8 @@ export const NowWork = memo((props: NowWorkProps) => {
                         <ArrowButton fill />
                     </div>
                 </>
+            ) : (
+                <div>Загрузка...</div>
             )}
             <Button onClick={handleRouteToCatalog}>Портфолио</Button>
         </section>

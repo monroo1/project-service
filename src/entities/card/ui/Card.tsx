@@ -24,7 +24,7 @@ export const Card = memo((props: CardProps) => {
 
     return (
         <VStack gap="32" className={classNames(cls.Card, {}, [className])}>
-            {isCatalog ? (
+            {isCatalog && !!props.attributes ? (
                 <>
                     <Swiper
                         modules={[A11y, Navigation]}
