@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { IResponseGetCards } from ".";
 
-export const getCards = async (page = 1, id?: number) => {
+export const getCards = async (page = 1, id: number = 0) => {
     const filter = id !== 0 ? `&filters[Category]=${id}` : "";
 
     return (await axios.get(
