@@ -50,7 +50,7 @@ export const Card = memo((props: CardProps) => {
                             >
                                 <div className={cls.container}>
                                     <img
-                                        src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${image.attributes.url}`}
+                                        src={image.attributes.url}
                                         alt={image.attributes.name}
                                     />
                                 </div>
@@ -67,7 +67,7 @@ export const Card = memo((props: CardProps) => {
             ) : (
                 <div className={cls.container}>
                     <img
-                        src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${props.attributes.Images.data[0].attributes.url}`}
+                        src={props.attributes.Images.data[0].attributes.url}
                         alt={props.attributes.Images.data[0].attributes.name}
                     />
                 </div>
