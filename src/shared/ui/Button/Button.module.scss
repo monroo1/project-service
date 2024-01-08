@@ -20,4 +20,8 @@
     &.fullWidth {
         width: 100%;
     }
+
+    &.activeTab {
+        background: var(--primary-color)
+    }
 }

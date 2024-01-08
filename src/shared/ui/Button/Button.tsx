@@ -6,10 +6,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     children: ReactNode;
     max?: boolean;
+    isActiveTab?: boolean;
 }
 
 export const Button = memo((props: ButtonProps) => {
-    const { className, children, max = false, ...otherProps } = props;
+    const {
+        className,
+        children,
+        max = false,
+        isActiveTab = false,
+        ...otherProps
+    } = props;
 
     return (
         <button
@@ -17,6 +24,7 @@ export const Button = memo((props: ButtonProps) => {
                 cls.Button,
                 {
                     [cls.fullWidth]: max,
+                    [cls.activeTab]: isActiveTab,
                 },
                 [className],
             )}
