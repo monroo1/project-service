@@ -33,7 +33,7 @@ export const NowWork = memo((props: NowWorkProps) => {
 
     const handleRouteToCatalog = useCallback(() => {
         router.push(getRouteCatalog());
-    }, []);
+    }, [router]);
 
     const { data: response, isLoading } = useQuery<
         AxiosResponse<IResponseGetCards>

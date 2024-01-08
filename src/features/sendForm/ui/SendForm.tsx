@@ -74,7 +74,7 @@ export const SendForm = memo((props: SendFormProps) => {
         setEmail("");
 
         return reset();
-    }, []);
+    }, [reset]);
 
     return isSuccess ? (
         <VStack className={cls.thanks} gap="24">

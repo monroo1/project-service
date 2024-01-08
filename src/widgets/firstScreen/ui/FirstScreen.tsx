@@ -17,7 +17,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
 
     const handleRouteToForm = useCallback(() => {
         router.push("/#form");
-    }, []);
+    }, [router]);
 
     return (
         <section className={classNames(cls.FirstScreen, {}, [className])}>
