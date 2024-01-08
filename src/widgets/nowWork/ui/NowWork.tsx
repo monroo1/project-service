@@ -52,6 +52,12 @@ export const NowWork = memo((props: NowWorkProps) => {
             <Text title="Сейчас в работе" size="xl" />
             {!isLoading && !!response ? (
                 <>
+                    <div ref={navigationPrevRef} className={cls.prevArrow}>
+                        <ArrowButton fill />
+                    </div>
+                    <div ref={navigationNextRef} className={cls.nextArrow}>
+                        <ArrowButton fill />
+                    </div>
                     <Swiper
                         modules={[A11y, Navigation]}
                         navigation={{
@@ -63,6 +69,12 @@ export const NowWork = memo((props: NowWorkProps) => {
                         slidesPerView={"auto"}
                         initialSlide={1}
                         className={cls.swp}
+                        onBeforeInit={(swiper: any) => {
+                            swiper.params.navigation.prevEl =
+                                navigationPrevRef.current;
+                            swiper.params.navigation.nextEl =
+                                navigationNextRef.current;
+                        }}
                     >
                         {response?.data.data.map((card, index) => (
                             <SwiperSlide
@@ -83,12 +95,6 @@ export const NowWork = memo((props: NowWorkProps) => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div ref={navigationPrevRef} className={cls.prevArrow}>
-                        <ArrowButton fill />
-                    </div>
-                    <div ref={navigationNextRef} className={cls.nextArrow}>
-                        <ArrowButton fill />
-                    </div>
                 </>
             ) : (
                 <div>Загрузка...</div>

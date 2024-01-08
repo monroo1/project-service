@@ -26,6 +26,12 @@ export const Card = memo((props: CardProps) => {
         <VStack gap="32" className={classNames(cls.Card, {}, [className])}>
             {isCatalog && !!props.attributes ? (
                 <>
+                    <div ref={navigationPrev} className={cls.prev}>
+                        <ArrowButton fill />
+                    </div>
+                    <div ref={navigationNext} className={cls.next}>
+                        <ArrowButton fill />
+                    </div>
                     <Swiper
                         modules={[A11y, Navigation]}
                         navigation={{
@@ -57,12 +63,6 @@ export const Card = memo((props: CardProps) => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div ref={navigationPrev} className={cls.prev}>
-                        <ArrowButton fill />
-                    </div>
-                    <div ref={navigationNext} className={cls.next}>
-                        <ArrowButton fill />
-                    </div>
                 </>
             ) : (
                 <div className={cls.container}>
