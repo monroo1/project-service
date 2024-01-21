@@ -54,3 +54,22 @@
 	--font-text-m: var(--font-size-m) / var(--font-line-default) var(--font-family-main);
 	--font-text-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
 }
+
+@media screen and (width <= 640px) {
+	:root {
+		--font-title-xxl: var(--font-size-m-title) / var(--font-line-xxs) var(--font-family-title);
+		--font-title-xl: var(--font-size-s-title) / var(--font-line-m) var(--font-family-main);
+		--font-title-l: var(--font-size-xs-title) / var(--font-line-s) var(--font-family-main);
+		--font-title-m: var(--font-size-xxl) / var(--font-line-s) var(--font-family-main);
+		--font-title-s: var(--font-size-xl) / var(--font-line-s) var(--font-family-main);
+		--font-text-xxl: var(--font-size-l) / var(--font-line-default) var(--font-family-title);
+		--font-text-xl: var(--font-size-m) / var(--font-line-xs) var(--font-family-main);
+		--font-text-l: var(--font-size-s) / var(--font-line-m) var(--font-family-main);
+		--font-text-m: var(--font-size-m) / var(--font-line-default) var(--font-family-main);
+		--font-text-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+	}
+
+
+	// --font-text-xxl: var(--font-size-xxl) / var(--font-line-default) var(--font-family-title);
+	// --font-text-xl: var(--font-size-xl) / var(--font-line-xs) var(--font-family-main);
+}

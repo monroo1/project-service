@@ -1,12 +1,15 @@
 .CatalogContent {
     display: grid;
     grid-gap: 32px;
-    grid-template-columns:  minmax(200px, 1fr) minmax(200px, 1fr);;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
 
     width: 100%;
     max-width: 100%;
+}
 
-    .item {
-        // max-width: %;
+@media screen and (width <= 800px) {
+    .CatalogContent {
+        grid-template-columns: minmax(200px, 1fr);
+        place-items: center;
     }
 }

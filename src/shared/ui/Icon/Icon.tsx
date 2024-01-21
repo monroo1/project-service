@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { ForwardedRef, forwardRef, memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Icon.module.scss";
 
@@ -21,45 +21,48 @@ interface ClickableBaseIconProps extends IconBaseProps {
 
 type IconProps = NonClickableBaseIconProps | ClickableBaseIconProps;
 
-export const Icon = memo((props: IconProps) => {
-    const {
-        className,
-        Svg,
-        width = 32,
-        clickable,
-        height = 32,
-        inverted = false,
-        ...otherProps
-    } = props;
+export const Icon = forwardRef(
+    (props: IconProps, ref: ForwardedRef<HTMLButtonElement>) => {
+        const {
+            className,
+            Svg,
+            width = 32,
+            clickable,
+            height = 32,
+            inverted = false,
+            ...otherProps
+        } = props;
 
-    const icon = (
-        <Svg
-            className={classNames(
-                cls.Icon,
-                {
-                    [cls.inverted]: inverted,
-                },
-                [className],
-            )}
-            width={width}
-            height={height}
-            {...otherProps}
-            onClick={undefined}
-        />
-    );
-
-    if (clickable) {
-        return (
-            <button
-                type="button"
-                className={cls.button}
-                onClick={props.onClick}
-                style={{ width, height }}
-            >
-                {icon}
-            </button>
+        const icon = (
+            <Svg
+                className={classNames(
+                    cls.Icon,
+                    {
+                        [cls.inverted]: inverted,
+                    },
+                    [className],
+                )}
+                width={width}
+                height={height}
+                {...otherProps}
+                onClick={undefined}
+            />
         );
-    }
 
-    return icon;
-});
+        if (clickable) {
+            return (
+                <button
+                    type="button"
+                    className={cls.button}
+                    onClick={props.onClick}
+                    style={{ width, height }}
+                    ref={ref}
+                >
+                    {icon}
+                </button>
+            );
+        }
+
+        return icon;
+    },
+);

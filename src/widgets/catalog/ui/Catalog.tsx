@@ -1,15 +1,19 @@
 "use client";
 import { memo, useState } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./Catalog.module.scss";
-import { CatalogContent } from "./CatalogContent/CatalogContent";
-import { IResponseGetCards, getCards } from "@/shared/api/cards";
 import { AxiosResponse } from "axios";
 import { useQuery } from "@tanstack/react-query";
+
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { IResponseGetCards, getCards } from "@/shared/api/cards";
 import { Button } from "@/shared/ui/Button";
 import ReactPaginate from "react-paginate";
 import { Text } from "@/shared/ui/Text";
 import { HStack } from "@/shared/ui/Stack";
+import { IResponseGetCategories, getCategories } from "@/shared/api/caegories";
+
+import { CatalogContent } from "./CatalogContent/CatalogContent";
+
+import cls from "./Catalog.module.scss";
 
 interface CatalogProps {
     className?: string;
@@ -27,6 +31,13 @@ export const Catalog = memo((props: CatalogProps) => {
         queryFn: () => getCards(page, tab),
     });
 
+    const { data: categories, isLoading: isLoadingCategories } = useQuery<
+        AxiosResponse<IResponseGetCategories>
+    >({
+        queryKey: ["categories"],
+        queryFn: () => getCategories(),
+    });
+
     const handlePageClick = (event: any) => {
         setPage(event.selected + 1);
     };
@@ -37,27 +48,29 @@ export const Catalog = memo((props: CatalogProps) => {
         >
             <Text title="Портфолио" size="xl" className={cls.title} />
             <HStack gap="24" className={cls.tabs}>
-                <Button
-                    className={cls.tab}
-                    isActiveTab={tab === 0 && true}
-                    onClick={() => setTab(0)}
-                >
-                    Все
-                </Button>
-                <Button
-                    className={cls.tab}
-                    isActiveTab={tab === 1 && true}
-                    onClick={() => setTab(1)}
-                >
-                    Кухни
-                </Button>
-                <Button
-                    className={cls.tab}
-                    isActiveTab={tab === 3 && true}
-                    onClick={() => setTab(3)}
-                >
-                    Шкафы
-                </Button>
+                {!isLoadingCategories && categories ? (
+                    <>
+                        <Button
+                            className={cls.tab}
+                            isActiveTab={tab === 0 && true}
+                            onClick={() => setTab(0)}
+                        >
+                            Все
+                        </Button>
+                        {categories.data.data.map((item) => (
+                            <Button
+                                key={item.id}
+                                className={cls.tab}
+                                isActiveTab={tab === item.id && true}
+                                onClick={() => setTab(item.id)}
+                            >
+                                {item.attributes.Name}
+                            </Button>
+                        ))}
+                    </>
+                ) : (
+                    <div>Загрузка категорий...</div>
+                )}
             </HStack>
             {isLoading ? (
                 <div>Загрузка...</div>

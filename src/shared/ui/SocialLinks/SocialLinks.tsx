@@ -7,6 +7,7 @@ import WaLogo from "../../assets/icons/WaLogo.svg";
 import VkLogo from "../../assets/icons/VkLogo.svg";
 import { Text } from "../Text";
 import cls from "./SocialLinks.module.scss";
+import { useRouter } from "next/navigation";
 
 interface SocialLinksProps {
     className?: string;
@@ -15,6 +16,7 @@ interface SocialLinksProps {
 
 export const SocialLinks = memo((props: SocialLinksProps) => {
     const { className, footer = false } = props;
+    const router = useRouter();
 
     const Links = () => (
         <HStack
@@ -26,14 +28,14 @@ export const SocialLinks = memo((props: SocialLinksProps) => {
                 height={24}
                 width={24}
                 clickable
-                onClick={() => console.log("asd")}
+                onClick={() => router.push("https://wa.me/79889429790")}
             />
             <Icon
                 Svg={VkLogo}
                 height={24}
                 width={24}
                 clickable
-                onClick={() => console.log("asd")}
+                onClick={() => router.push("https://vk.com/mebel_ps")}
             />
         </HStack>
     );

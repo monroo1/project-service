@@ -1,15 +1,10 @@
+import { ICategory } from "../caegories";
+
 export interface IImage {
     id: number;
     attributes: {
         name: string;
         url: string;
-    };
-}
-
-export interface ICategory {
-    id: number;
-    attributes: {
-        Name: string;
     };
 }
 

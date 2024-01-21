@@ -27,3 +27,21 @@
     }
 
 }
+
+@media screen and (width <= 820px) {
+    .content {
+        flex-direction: column;
+
+        .secondItem {
+            padding: 12px 24px;
+            border-top: none;
+            border-left: none;
+        }
+
+        .firstItem {
+            padding: 12px 24px;
+        }
+    }
+
+    
+}

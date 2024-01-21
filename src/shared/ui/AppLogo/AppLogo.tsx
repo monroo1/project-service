@@ -1,10 +1,9 @@
 "use client";
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import AppIcon from "../../assets/icons/AppLogo.svg";
-import { Icon } from "../Icon";
+import AppIcon from "../../assets/icons/AppLogo.png";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 interface AppLogoProps {
     className?: string;
 }
@@ -14,13 +13,13 @@ export const AppLogo = memo((props: AppLogoProps) => {
     const router = useRouter();
 
     return (
-        <Icon
-            className={classNames("", {}, [className])}
-            Svg={AppIcon}
+        <Image
+            src={AppIcon}
             height={50}
             width={149}
-            clickable
+            className={classNames("", {}, [className])}
             onClick={() => router.push("/")}
+            alt="Logotype"
         />
     );
 });

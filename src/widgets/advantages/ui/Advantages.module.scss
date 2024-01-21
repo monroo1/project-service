@@ -67,3 +67,38 @@
         }
     }
 }
+
+@media screen and (width <= 860px) {
+    .imageWrapper {
+        display: none;
+    }
+
+    .Advantages {
+        .item {
+            & > div:first-child {
+                width: 30%;
+            }
+
+            & > div:last-child {
+                width: 70%;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (width <= 550px) {
+    .Advantages {
+        .item {
+            & > div:first-child {
+                display: none;
+            }
+
+            & > div:last-child {
+                width: 100%;
+                border-left: none;
+            }
+        }
+    }
+}

@@ -1,8 +1,60 @@
 .Header {
+    position: relative;
     display: flex;
     padding: 20px;
+
+    .burgerIcon {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: none;
+    }
 }
 
 .phone {
     color: var(--primary-color);
+}
+
+@media screen and (width <= 900px) {
+    .Header {
+        .nav {
+            display: none;
+        }
+
+        .social {
+            display: none;
+        }
+
+        .socialPhone {
+            display: none;
+        }
+
+        .burgerIcon {
+            display: block;
+
+            & > g > rect {
+                fill: white;
+            }
+        }
+
+        .burgerMenu {
+            position: absolute;
+            z-index: 10;
+            top: 90px;
+            right: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            width: 320px;
+            height: calc(100svh - 90px);
+            padding: 30px 26px;
+
+            background-color: white;
+        }
+    }
+    
+    
 }
