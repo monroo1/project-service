@@ -45,3 +45,14 @@
 
     
 }
+
+@media screen and (width <= 600px) {
+    .About {
+        padding-top: 70px;
+
+        & > div:first-child {
+            margin-bottom: 40px;
+            padding: 0;
+        }
+    }
+}

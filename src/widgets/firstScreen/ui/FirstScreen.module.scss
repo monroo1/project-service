@@ -26,3 +26,13 @@
         text-align: center;
     }
 }
+
+@media screen and (width <= 600px) {
+    .FirstScreen {
+        .content {
+            max-width: 100%;
+            padding: 0 24px;
+        }
+    }
+    
+}

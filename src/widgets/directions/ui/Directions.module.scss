@@ -62,3 +62,14 @@
         }
     }
 }
+
+@media screen and (width <= 600px) {
+    .Directions {
+        padding: 70px 20px;
+    }
+
+    .title {
+        margin-bottom: 40px;
+        color: var(--text-color);
+    }
+}

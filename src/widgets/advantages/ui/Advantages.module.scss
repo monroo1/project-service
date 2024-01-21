@@ -88,8 +88,15 @@
     
 }
 
-@media screen and (width <= 550px) {
+@media screen and (width <= 600px) {
     .Advantages {
+        padding: 70px 24px;
+
+        & > div:first-child {
+            padding: 0;
+            padding-bottom: 40px;
+        }
+
         .item {
             & > div:first-child {
                 display: none;
@@ -102,3 +109,4 @@
         }
     }
 }
+
