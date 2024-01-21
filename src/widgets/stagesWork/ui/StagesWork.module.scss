@@ -29,6 +29,16 @@
             color: rgb(255 255 255 / 60%)
         }
     }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        width: 100%;
+    }
 }
 
 @media screen and (width <= 800px) {

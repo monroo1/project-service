@@ -4,7 +4,9 @@
 }
 
 .content {
+    display: flex;
     gap: 34px;
+    justify-content: space-between;
 
     & > div:first-child {
         padding: 100px 0;

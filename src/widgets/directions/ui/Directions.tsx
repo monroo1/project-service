@@ -26,7 +26,7 @@ export const Directions = memo((props: DirectionsProps) => {
                 className={cls.title}
                 align="center"
             />
-            <HStack max wrap="wrap" justify="between" className={cls.content}>
+            <div className={cls.content}>
                 <VStack className={cls.item} justify="center">
                     <Text title="01" size="s" bold />
                     <Text title="Дизайн интерьера" size="s" bold />
@@ -57,7 +57,7 @@ export const Directions = memo((props: DirectionsProps) => {
                         />
                     </div>
                 </VStack>
-            </HStack>
+            </div>
         </section>
     );
 });

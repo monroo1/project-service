@@ -27,7 +27,7 @@ export const About = memo((props: AboutProps) => {
                 align="center"
                 size="l"
             />
-            <HStack className={cls.content}>
+            <div className={cls.content}>
                 <HStack gap="16" align="start" className={cls.firstItem}>
                     <div>
                         <Icon Svg={ListIcon} width={18} height={18} />
@@ -46,7 +46,7 @@ export const About = memo((props: AboutProps) => {
                         size="xl"
                     />
                 </HStack>
-            </HStack>
+            </div>
         </article>
     );
 });

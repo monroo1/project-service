@@ -26,6 +26,10 @@
         border-left: 1px solid rgb(40 43 34 / 20%);
     }
 
+    .content {
+        display: flex;
+    }
+
 }
 
 @media screen and (width <= 820px) {

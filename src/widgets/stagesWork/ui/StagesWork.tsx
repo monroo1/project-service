@@ -19,14 +19,7 @@ export const StagesWork = memo((props: StagesWorkProps) => {
                 max
             >
                 <Text title="Этапы работы" size="xl" align="center" />
-                <HStack
-                    max
-                    justify="between"
-                    gap="32"
-                    align="start"
-                    wrap="wrap"
-                    className={cls.flex}
-                >
+                <div className={cls.flex}>
                     <VStack gap="16" className={cls.item}>
                         <Text title="01" size="s" />
                         <Text text="Подписание договора" size="xl" />
@@ -59,7 +52,7 @@ export const StagesWork = memo((props: StagesWorkProps) => {
                             size="l"
                         />
                     </VStack>
-                </HStack>
+                </div>
             </VStack>
         </section>
     );

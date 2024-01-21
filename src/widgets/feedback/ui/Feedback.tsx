@@ -19,10 +19,7 @@ export const Feedback = memo((props: FeedbackProps) => {
             className={classNames(cls.Feedback, {}, [className])}
             id="form"
         >
-            <HStack
-                className={classNames(cls.content, {}, ["wrapper"])}
-                justify="between"
-            >
+            <div className={classNames(cls.content, {}, ["wrapper"])}>
                 <VStack gap="24">
                     <Text title="Обсудим ваш проект?" size="xl" />
                     <Text
@@ -34,7 +31,7 @@ export const Feedback = memo((props: FeedbackProps) => {
                 <div className={cls.imageWrapper}>
                     <Image src={ProposalImg} alt="Proposal image" fill />
                 </div>
-            </HStack>
+            </div>
         </section>
     );
 });
