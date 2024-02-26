@@ -16,7 +16,7 @@
         color: white;
     }
 
-    & > div:first-child > div:nth-child(2) >  p {
+    & > div:first-child > div:nth-child(2) > p {
         width: 300px;
         color: white;
     }
@@ -29,11 +29,21 @@
         & img {
             object-fit: cover;
         }
-    }
 
+        .gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgb(0 0 0 / 20%) -13.19%,
+                rgb(0 0 0 / 85%) 94.01%
+            );
+        }
+    }
 }
 
-@media screen and (width <= 780px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 780px) {
     .content {
         flex-direction: column;
     }

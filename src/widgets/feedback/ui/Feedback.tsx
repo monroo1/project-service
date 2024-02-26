@@ -30,6 +30,7 @@ export const Feedback = memo((props: FeedbackProps) => {
                 </VStack>
                 <div className={cls.imageWrapper}>
                     <Image src={ProposalImg} alt="Proposal image" fill />
+                    <div className={cls.gradient} />
                 </div>
             </div>
         </section>

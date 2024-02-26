@@ -30,7 +30,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <VStack max gap="8">
                         <Text title="Мобильность" />
                         <Text
-                            text="Проводим встречи на объектах Ростова"
+                            text="Проводим встречи на объекте заказчика в любое удобное время"
                             size="l"
                         />
                     </VStack>
@@ -60,7 +60,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <VStack max gap="8">
                         <Text title="Качество" />
                         <Text
-                            text="Производим исключительно из проверенных европейских брендов"
+                            text="Производим исключительно из проверенных брендов"
                             size="l"
                         />
                     </VStack>
@@ -80,7 +80,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                         />
                     </VStack>
                 </HStack>
-                <HStack className={cls.item} align="start">
+                {/* <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="05" />
                         <div className={cls.imageWrapper}>
@@ -94,7 +94,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             size="l"
                         />
                     </VStack>
-                </HStack>
+                </HStack> */}
             </VStack>
         </section>
     );

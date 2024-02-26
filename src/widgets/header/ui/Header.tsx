@@ -59,7 +59,11 @@ export const Header = memo((props: HeaderProps) => {
             <SocialLinks className={cls.social} />
             <HStack gap="8" className={cls.socialPhone}>
                 <Icon Svg={PhoneIcon} inverted width={22} height={22} />
-                <Text text="+380 67661 5415" size="xxl" className={cls.phone} />
+                <Text
+                    text="+7 988 510-52-52"
+                    size="xxl"
+                    className={cls.phone}
+                />
             </HStack>
             <Icon
                 Svg={BurgerIcon}
@@ -94,7 +98,7 @@ export const Header = memo((props: HeaderProps) => {
                                 height={22}
                             />
                             <Text
-                                text="+380 67661 5415"
+                                text="+7 988 510-52-52"
                                 size="xxl"
                                 className={cls.phone}
                             />

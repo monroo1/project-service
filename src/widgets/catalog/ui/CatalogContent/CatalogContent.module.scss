@@ -7,7 +7,8 @@
     max-width: 100%;
 }
 
-@media screen and (width <= 800px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 800px) {
     .CatalogContent {
         grid-template-columns: minmax(200px, 1fr);
         place-items: center;

@@ -1,7 +1,7 @@
 .NowWork {
     position: relative;
     max-width: 100svw;
-    padding-top: 140px;
+    padding: 140px 0;
 
     .swp {
         max-width: 100%;
@@ -17,7 +17,7 @@
 
     .prevArrow {
         position: absolute;
-        z-index: 100; 
+        z-index: 100;
         top: 50%;
         left: calc((100svw - 600px) / 2 - 124px);
         rotate: 180deg;
@@ -33,7 +33,7 @@
 
     .nextArrow {
         position: absolute;
-        z-index: 100; 
+        z-index: 100;
         top: 50%;
         right: calc((100svw - 600px) / 2 - 120px);
 
@@ -47,7 +47,8 @@
     }
 }
 
-@media screen and (width <= 850px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 850px) {
     .NowWork {
         .element {
             width: 100svw;
@@ -73,14 +74,11 @@
             padding: 0 20px;
         }
     }
-    
 }
 
-
-@media screen and (width <= 600px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 600px) {
     .NowWork {
-        padding-top: 70px;
-
-        
+        padding: 70px 0;
     }
 }

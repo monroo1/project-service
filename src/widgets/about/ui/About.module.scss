@@ -29,10 +29,10 @@
     .content {
         display: flex;
     }
-
 }
 
-@media screen and (width <= 820px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 820px) {
     .content {
         flex-direction: column;
 
@@ -46,11 +46,10 @@
             padding: 12px 24px;
         }
     }
-
-    
 }
 
-@media screen and (width <= 600px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 600px) {
     .About {
         padding-top: 70px;
 

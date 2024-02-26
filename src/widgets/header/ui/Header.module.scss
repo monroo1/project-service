@@ -16,7 +16,8 @@
     color: var(--primary-color);
 }
 
-@media screen and (width <= 900px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 900px) {
     .Header {
         .nav {
             display: none;
@@ -55,6 +56,4 @@
             background-color: white;
         }
     }
-    
-    
 }

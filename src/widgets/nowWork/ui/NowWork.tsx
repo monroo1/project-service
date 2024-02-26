@@ -44,6 +44,7 @@ export const NowWork = memo((props: NowWorkProps) => {
 
     return (
         <section
+            id="inWork"
             className={classNames(cls.NowWork, {}, [
                 className,
                 getStack({ direction: "column", justify: "center", gap: "40" }),

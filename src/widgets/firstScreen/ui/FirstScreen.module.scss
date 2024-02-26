@@ -4,7 +4,6 @@
     min-height: 687px;
     padding-top: 20vh;
 
-    
     background-image: url("../../../shared/assets/background/firstScreen.jpeg");
     background-repeat: no-repeat;
     background-position: center 25%;
@@ -13,7 +12,11 @@
     .gradient {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgb(0 0 0 / 20%) -13.19%, rgb(0 0 0 / 85%) 94.01%);
+        background: linear-gradient(
+            180deg,
+            rgb(0 0 0 / 20%) -13.19%,
+            rgb(0 0 0 / 85%) 94.01%
+        );
     }
 
     .content {
@@ -27,12 +30,12 @@
     }
 }
 
-@media screen and (width <= 600px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 600px) {
     .FirstScreen {
         .content {
             max-width: 100%;
             padding: 0 24px;
         }
     }
-    
 }

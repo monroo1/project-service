@@ -1,5 +1,5 @@
 "use client";
-import { memo, useCallback } from "react";
+import { memo } from "react";
 import { Icon } from "../Icon";
 import ArrowIcon from "../../assets/icons/Arrow.svg";
 import cls from "./ArrowButton.module.scss";

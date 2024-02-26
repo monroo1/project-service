@@ -15,7 +15,7 @@ import {
     getRouteAbout,
     getRouteAdvantages,
     getRouteStagesWork,
-    getRouteDirections,
+    getRouteNowWork,
 } from "@/shared/const/router";
 import { useRouter } from "next/navigation";
 
@@ -48,17 +48,11 @@ export const Footer = memo((props: FooterProps) => {
                     <VStack gap="32">
                         <AppLink href={getRouteAbout()}>О нас</AppLink>
                         <AppLink href={getRouteCatalog()}>Каталог</AppLink>
-                        <AppLink href={getRouteStagesWork()}>В работе</AppLink>
-                    </VStack>
-                    <VStack gap="32">
                         <AppLink href={getRouteAdvantages()}>
                             Преимущества
                         </AppLink>
                         <AppLink href={getRouteStagesWork()}>
                             Этапы работы
-                        </AppLink>
-                        <AppLink href={getRouteDirections()}>
-                            Направления
                         </AppLink>
                     </VStack>
                 </HStack>
@@ -66,7 +60,7 @@ export const Footer = memo((props: FooterProps) => {
                     <HStack gap="8">
                         <Icon Svg={PhoneIcon} inverted width={22} height={22} />
                         <Text
-                            text="+380 67661 5415"
+                            text="+7 988 510-52-52"
                             size="xxl"
                             className={cls.phone}
                         />
