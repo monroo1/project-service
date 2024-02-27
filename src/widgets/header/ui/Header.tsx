@@ -51,7 +51,7 @@ export const Header = memo((props: HeaderProps) => {
         >
             <AppLogo />
             <HStack gap="40" className={cls.nav}>
-                <AppLink href={getRouteCatalog()}>Каталог</AppLink>
+                <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
                 <AppLink href={getRouteAbout()}>О нас</AppLink>
                 <AppLink href={getRouteAdvantages()}>Преимущества</AppLink>
                 <AppLink href={getRouteStagesWork()}>Этапы работы</AppLink>
@@ -78,7 +78,7 @@ export const Header = memo((props: HeaderProps) => {
             {isOpen && (
                 <div className={cls.burgerMenu}>
                     <VStack gap="24">
-                        <AppLink href={getRouteCatalog()}>Каталог</AppLink>
+                        <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
                         <AppLink href={getRouteAbout()}>О нас</AppLink>
                         <AppLink href={getRouteAdvantages()}>
                             Преимущества

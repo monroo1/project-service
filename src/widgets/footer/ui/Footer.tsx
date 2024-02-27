@@ -15,7 +15,6 @@ import {
     getRouteAbout,
     getRouteAdvantages,
     getRouteStagesWork,
-    getRouteNowWork,
 } from "@/shared/const/router";
 import { useRouter } from "next/navigation";
 
@@ -47,7 +46,7 @@ export const Footer = memo((props: FooterProps) => {
                 <HStack gap="40">
                     <VStack gap="32">
                         <AppLink href={getRouteAbout()}>О нас</AppLink>
-                        <AppLink href={getRouteCatalog()}>Каталог</AppLink>
+                        <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
                         <AppLink href={getRouteAdvantages()}>
                             Преимущества
                         </AppLink>

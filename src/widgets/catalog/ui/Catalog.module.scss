@@ -1,12 +1,14 @@
 .Catalog {
-    padding: 140px 20px 100px;
+    padding: 100px 20px ;
 
     .tabs {
+        gap: 12px;
+        column-gap: 24px;
         margin-bottom: 60px;
     }
 
     .tab {
-        width: 120px;
+        width: auto;
         padding: 12px 24px;
         border-radius: 32px;
     }
@@ -64,5 +66,12 @@
 
     .none {
         display: none;
+    }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 600px) {
+    .Catalog {
+        padding:  70px 20px;
     }
 }
