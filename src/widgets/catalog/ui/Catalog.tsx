@@ -52,9 +52,11 @@ export const Catalog = memo((props: CatalogProps) => {
     };
 
     useLayoutEffect(() => {
-        document
-            .getElementById("catalog")
-            ?.scrollIntoView({ behavior: "smooth" });
+        if (tabPrev.current !== 0) {
+            document
+                .getElementById("catalog")
+                ?.scrollIntoView({ behavior: "smooth" });
+        }
     }, [page]);
 
     return (

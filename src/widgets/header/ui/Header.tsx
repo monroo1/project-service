@@ -56,7 +56,52 @@ export const Header = memo((props: HeaderProps) => {
                 <AppLink href={getRouteAdvantages()}>Преимущества</AppLink>
                 <AppLink href={getRouteStagesWork()}>Этапы работы</AppLink>
             </HStack>
-            <SocialLinks className={cls.social} />
+
+            <div className={cls.linksMobile}>
+                <SocialLinks className={cls.social} />
+                <Icon
+                    Svg={BurgerIcon}
+                    inverted
+                    width={34}
+                    height={34}
+                    className={cls.burgerIcon}
+                    clickable
+                    onClick={() => setOpen((prev) => !prev)}
+                    ref={rootRef}
+                />
+                {isOpen && (
+                    <div className={cls.burgerMenu}>
+                        <VStack gap="24">
+                            <AppLink href={getRouteCatalog()}>
+                                Портфолио
+                            </AppLink>
+                            <AppLink href={getRouteAbout()}>О нас</AppLink>
+                            <AppLink href={getRouteAdvantages()}>
+                                Преимущества
+                            </AppLink>
+                            <AppLink href={getRouteStagesWork()}>
+                                Этапы работы
+                            </AppLink>
+                        </VStack>
+
+                        <div>
+                            <HStack gap="8">
+                                <Icon
+                                    Svg={PhoneIcon}
+                                    inverted
+                                    width={22}
+                                    height={22}
+                                />
+                                <Text
+                                    text="+7 988 510-52-52"
+                                    size="xxl"
+                                    className={cls.phone}
+                                />
+                            </HStack>
+                        </div>
+                    </div>
+                )}
+            </div>
             <HStack gap="8" className={cls.socialPhone}>
                 <Icon Svg={PhoneIcon} inverted width={22} height={22} />
                 <Text
@@ -65,47 +110,6 @@ export const Header = memo((props: HeaderProps) => {
                     className={cls.phone}
                 />
             </HStack>
-            <Icon
-                Svg={BurgerIcon}
-                inverted
-                width={34}
-                height={34}
-                className={cls.burgerIcon}
-                clickable
-                onClick={() => setOpen((prev) => !prev)}
-                ref={rootRef}
-            />
-            {isOpen && (
-                <div className={cls.burgerMenu}>
-                    <VStack gap="24">
-                        <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
-                        <AppLink href={getRouteAbout()}>О нас</AppLink>
-                        <AppLink href={getRouteAdvantages()}>
-                            Преимущества
-                        </AppLink>
-                        <AppLink href={getRouteStagesWork()}>
-                            Этапы работы
-                        </AppLink>
-                        <SocialLinks />
-                    </VStack>
-
-                    <div>
-                        <HStack gap="8">
-                            <Icon
-                                Svg={PhoneIcon}
-                                inverted
-                                width={22}
-                                height={22}
-                            />
-                            <Text
-                                text="+7 988 510-52-52"
-                                size="xxl"
-                                className={cls.phone}
-                            />
-                        </HStack>
-                    </div>
-                </div>
-            )}
         </header>
     );
 });

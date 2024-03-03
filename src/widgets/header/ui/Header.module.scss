@@ -11,6 +11,14 @@
     .burgerMenu {
         display: none;
     }
+
+
+    .linksMobile {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        width: 64px;
+    }
 }
 
 .phone {
@@ -24,10 +32,6 @@
             display: none;
         }
 
-        .social {
-            display: none;
-        }
-
         .socialPhone {
             display: none;
         }
@@ -38,6 +42,10 @@
             & > g > rect {
                 fill: white;
             }
+        }
+
+        .linksMobile {
+            width: auto;
         }
 
         .burgerMenu {

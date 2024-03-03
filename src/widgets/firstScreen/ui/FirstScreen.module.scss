@@ -1,13 +1,14 @@
 .FirstScreen {
     position: relative;
-
     min-height: 687px;
     padding-top: 20vh;
 
-    background-image: url("../../../shared/assets/background/firstScreen.jpeg");
-    background-repeat: no-repeat;
-    background-position: center 25%;
-    background-size: cover;
+    // background-image: url("../../../shared/assets/background/firstScreen.jpeg");
+    // background-repeat: no-repeat;
+    // background-position: center 25%;
+    // background-size: cover;
+
+    background-color: #776B5C;
 
     .gradient {
         position: absolute;
