@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://xn--b1afanhwgieieg.online
+
+# Sitemaps
+Sitemap: https://xn--b1afanhwgieieg.online/sitemap.xml
