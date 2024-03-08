@@ -27,7 +27,7 @@ export const Footer = memo((props: FooterProps) => {
 
     const router = useRouter();
     const handleRouteToForm = useCallback(() => {
-        router.push("#form");
+        router.push("#header");
     }, [router]);
 
     return (

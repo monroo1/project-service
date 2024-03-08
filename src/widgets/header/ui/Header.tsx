@@ -43,6 +43,7 @@ export const Header = memo((props: HeaderProps) => {
 
     return (
         <header
+            id="header"
             className={classNames(cls.Header, {}, [
                 className,
                 "wrapper",
