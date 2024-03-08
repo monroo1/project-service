@@ -8,7 +8,7 @@
     // background-position: center 25%;
     // background-size: cover;
 
-    background-color: #776B5C;
+    background-color: #CBB59C;
 
     .gradient {
         position: absolute;
@@ -29,13 +29,35 @@
         color: white;
         text-align: center;
     }
+
+    .links {
+        padding: 12px 32px;
+        background-color: var(--secondary-color);
+        border-radius: 32px;
+
+        & svg {
+            color: white;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 810px) {
+    .FirstScreen {
+        .content {
+            max-width: 100%;
+            padding: 0 64px;
+        }
+    }
 }
 
 /* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-width: 600px) {
     .FirstScreen {
         .content {
-            max-width: 100%;
             padding: 0 24px;
         }
     }
