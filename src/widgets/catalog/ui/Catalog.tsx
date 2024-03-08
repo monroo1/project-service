@@ -1,5 +1,5 @@
 "use client";
-import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { memo, useLayoutEffect, useRef, useState } from "react";
 import { AxiosResponse } from "axios";
 import { useQuery } from "@tanstack/react-query";
 
@@ -14,7 +14,6 @@ import { IResponseGetCategories, getCategories } from "@/shared/api/caegories";
 import { CatalogContent } from "./CatalogContent/CatalogContent";
 
 import cls from "./Catalog.module.scss";
-import { useRouter } from "next/navigation";
 
 interface CatalogProps {
     className?: string;

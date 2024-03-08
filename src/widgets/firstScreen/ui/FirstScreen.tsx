@@ -1,12 +1,10 @@
 "use client";
-import { memo, useCallback } from "react";
+import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./FirstScreen.module.scss";
 import { HStack, VStack } from "@/shared/ui/Stack";
-import { Button } from "@/shared/ui/Button";
 import { Text } from "@/shared/ui/Text";
 import { useRouter } from "next/navigation";
-import { SocialLinks } from "@/shared/ui/SocialLinks";
 import { Icon } from "@/shared/ui/Icon";
 
 import WaLogo from "@/shared/assets/icons/WaLogo.svg";
@@ -19,10 +17,6 @@ interface FirstScreenProps {
 export const FirstScreen = memo((props: FirstScreenProps) => {
     const { className } = props;
     const router = useRouter();
-
-    const handleRouteToForm = useCallback(() => {
-        router.push("/#form");
-    }, [router]);
 
     return (
         <section className={classNames(cls.FirstScreen, {}, [className])}>

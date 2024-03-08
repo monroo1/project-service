@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./StagesWork.module.scss";
-import { HStack, VStack } from "@/shared/ui/Stack";
+import { VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text";
 
 interface StagesWorkProps {

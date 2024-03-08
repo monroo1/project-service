@@ -2,7 +2,7 @@ import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Feedback.module.scss";
 import { SendForm } from "@/features/sendForm";
-import { HStack, VStack } from "@/shared/ui/Stack";
+import { VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text";
 import Image from "next/image";
 import ProposalImg from "@/shared/assets/background/proposal.jpeg";
