@@ -33,7 +33,7 @@
 
     .links {
         padding: 12px 32px;
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color) !important;
         border-radius: 32px;
 
         & svg {

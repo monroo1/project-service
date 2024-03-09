@@ -7,7 +7,7 @@ import Image from "next/image";
 import housewarming from "@/shared/assets/advantages/housewarming.jpg";
 import document from "@/shared/assets/advantages/document.jpg";
 import installation from "@/shared/assets/advantages/installation.jpg";
-import production from "@/shared/assets/advantages/production.jpg";
+import chy from "@/shared/assets/advantages/chy.jpg";
 
 interface AdvantagesProps {
     className?: string;
@@ -46,7 +46,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <HStack align="start">
                         <Text title="02" />
                         <div className={cls.imageWrapper}>
-                            <Image src={production} alt="Изготовление" fill />
+                            <Image src={chy} alt="Изготовление" fill />
                         </div>
                     </HStack>
                     <VStack max gap="8">
