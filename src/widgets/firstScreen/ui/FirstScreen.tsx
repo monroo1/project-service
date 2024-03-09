@@ -9,6 +9,7 @@ import { Icon } from "@/shared/ui/Icon";
 
 import WaLogo from "@/shared/assets/icons/WaLogo.svg";
 import VkLogo from "@/shared/assets/icons/VkLogo.svg";
+import { Header } from "@/widgets/header";
 
 interface FirstScreenProps {
     className?: string;
@@ -20,6 +21,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
 
     return (
         <section className={classNames(cls.FirstScreen, {}, [className])}>
+            <Header />
             <VStack
                 max
                 gap="32"

@@ -21,7 +21,7 @@ export default function RootLayout({
     return (
         <html lang="ru">
             <body>
-                <Header />
+                {/* <Header /> */}
                 <FirstScreen />
                 <Providers>{children}</Providers>
                 <Script id="yandex-metrika" strategy="afterInteractive">

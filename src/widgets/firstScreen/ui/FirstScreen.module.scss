@@ -1,7 +1,7 @@
 .FirstScreen {
     position: relative;
     min-height: 687px;
-    padding-top: 20vh;
+    
 
     // background-image: url("../../../shared/assets/background/firstScreen.jpeg");
     // background-repeat: no-repeat;
@@ -14,7 +14,7 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(
-            180deg,
+            0deg,
             rgb(0 0 0 / 20%) -13.19%,
             rgb(0 0 0 / 85%) 94.01%
         );
@@ -25,6 +25,7 @@
         z-index: 2;
 
         max-width: 45vw;
+        margin-top: 12vh;
 
         color: white;
         text-align: center;

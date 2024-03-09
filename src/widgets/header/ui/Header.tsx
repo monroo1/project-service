@@ -62,7 +62,6 @@ export const Header = memo((props: HeaderProps) => {
                 <SocialLinks className={cls.social} />
                 <Icon
                     Svg={BurgerIcon}
-                    inverted
                     width={34}
                     height={34}
                     className={cls.burgerIcon}
