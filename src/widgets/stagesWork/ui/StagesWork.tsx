@@ -18,37 +18,37 @@ export const StagesWork = memo((props: StagesWorkProps) => {
                 className={classNames(cls.content, {}, [className, "wrapper"])}
                 max
             >
-                <Text title="Этапы работы" size="xl" align="center" />
+                <Text title="Наши преимущества" size="xl" align="center" />
                 <div className={cls.flex}>
                     <VStack gap="16" className={cls.item}>
                         <Text title="01" size="s" />
-                        <Text text="Подписание договора" size="xl" />
+                        <Text text="Мобильность" size="xl" />
                         <Text
-                            text="Определяемся с бюджетом, материалами и фурнитурой. Вносим правки в проект, подписываем пакет документов."
+                            text="Проводим встречи на объекте заказчика в любое удобное время"
                             size="l"
                         />
                     </VStack>
                     <VStack gap="16" className={cls.item}>
                         <Text title="02" size="s" />
-                        <Text text="Изготовление " size="xl" />
+                        <Text text="Надежность" size="xl" />
                         <Text
-                            text="После подписания договора и определения сроков команда Проект сервис приступает к самому интересному – производству!"
+                            text="Система нашей работы сосредоточена на качестве и сроках завершения проекта"
                             size="l"
                         />
                     </VStack>
                     <VStack gap="16" className={cls.item}>
                         <Text title="03" size="s" />
-                        <Text text="Установка" size="xl" />
+                        <Text text="Качество" size="xl" />
                         <Text
-                            text="По готовности производства приступаем к монтажу на объекте. В оговоренное время выполняем доставку и монтаж."
+                            text="Производим исключительно из проверенных брендов"
                             size="l"
                         />
                     </VStack>
                     <VStack gap="16" className={cls.item}>
                         <Text title="04" size="s" />
-                        <Text text="Новоселье" size="xl" />
+                        <Text text="Профессионализм" size="xl" />
                         <Text
-                            text="По окончании делаем проверку и подписываем акт окончания работ."
+                            text="Наша команда – это клуб профессионалов, объединенных в одной компании"
                             size="l"
                         />
                     </VStack>

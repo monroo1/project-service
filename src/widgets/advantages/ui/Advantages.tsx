@@ -4,7 +4,10 @@ import cls from "./Advantages.module.scss";
 import { Text } from "@/shared/ui/Text";
 import { HStack, VStack } from "@/shared/ui/Stack";
 import Image from "next/image";
-import image from "@/shared/assets/advantages/first.png";
+import housewarming from "@/shared/assets/advantages/housewarming.jpg";
+import document from "@/shared/assets/advantages/document.jpg";
+import installation from "@/shared/assets/advantages/installation.jpg";
+import production from "@/shared/assets/advantages/production.jpg";
 
 interface AdvantagesProps {
     className?: string;
@@ -18,19 +21,23 @@ export const Advantages = memo((props: AdvantagesProps) => {
             className={classNames(cls.Advantages, {}, [className, "wrapper"])}
             id="advantages"
         >
-            <Text title="Наши преимущества" size="xl" align="center" />
+            <Text title="Этапы работы" size="xl" align="center" />
             <VStack gap="24">
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="01" />
                         <div className={cls.imageWrapper}>
-                            <Image src={image} alt="Мобильность" fill />
+                            <Image
+                                src={document}
+                                alt="Подписание договора"
+                                fill
+                            />
                         </div>
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Мобильность" />
+                        <Text title="Подписание договора" />
                         <Text
-                            text="Проводим встречи на объекте заказчика в любое удобное время"
+                            text="Определяемся с бюджетом, материалами и фурнитурой. Вносим правки в проект, подписываем пакет документов"
                             size="l"
                         />
                     </VStack>
@@ -39,13 +46,13 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <HStack align="start">
                         <Text title="02" />
                         <div className={cls.imageWrapper}>
-                            <Image src={image} alt="Надежность" fill />
+                            <Image src={production} alt="Изготовление" fill />
                         </div>
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Надежность" />
+                        <Text title="Изготовление" />
                         <Text
-                            text="Система нашей работы сосредоточена на качестве и сроках завершения проекта"
+                            text="После подписания договора и определения сроков команда Проект сервис приступает к самому интересному – производству!"
                             size="l"
                         />
                     </VStack>
@@ -54,13 +61,13 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <HStack align="start">
                         <Text title="03" />
                         <div className={cls.imageWrapper}>
-                            <Image src={image} alt="Качество" fill />
+                            <Image src={installation} alt="Установка" fill />
                         </div>
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Качество" />
+                        <Text title="Установка" />
                         <Text
-                            text="Производим исключительно из проверенных брендов"
+                            text="По готовности производства приступаем к монтажу на объекте. В оговоренное время выполняем доставку и монтаж"
                             size="l"
                         />
                     </VStack>
@@ -69,13 +76,13 @@ export const Advantages = memo((props: AdvantagesProps) => {
                     <HStack align="start">
                         <Text title="04" />
                         <div className={cls.imageWrapper}>
-                            <Image src={image} alt="Профессионализм" fill />
+                            <Image src={housewarming} alt="Новоселье" fill />
                         </div>
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Профессионализм" />
+                        <Text title="Новоселье" />
                         <Text
-                            text="Наша команда – это клуб профессионалов, объединенных в одной компании"
+                            text="По окончании делаем проверку и подписываем акт окончания работ"
                             size="l"
                         />
                     </VStack>

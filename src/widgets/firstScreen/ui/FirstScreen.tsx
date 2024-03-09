@@ -33,7 +33,12 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                     size="xl"
                     align="center"
                 />
-
+                <Text
+                    title="Обсудить проект"
+                    align="center"
+                    size="s"
+                    className={cls.info}
+                />
                 <HStack className={cls.links} gap="24">
                     <Icon
                         Svg={WaLogo}
@@ -42,13 +47,14 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                         clickable
                         onClick={() => router.push("https://wa.me/79889429790")}
                     />
-
-                    <Text
-                        title="Обсудим проект?"
-                        align="center"
-                        size="s"
-                        className={cls.info}
-                    />
+                    <a href="tel:+79885105252" className={cls.info}>
+                        <Text
+                            text="+7 988 510-52-52"
+                            family="Lato"
+                            align="center"
+                            size="xl"
+                        />
+                    </a>
                     <Icon
                         Svg={VkLogo}
                         height={24}
@@ -57,10 +63,6 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                         onClick={() => router.push("https://vk.com/mebel_ps")}
                     />
                 </HStack>
-                {/* <Button onClick={handleRouteToForm} className={cls.links}>
-                    Обсудим проект?
-                </Button> */}
-                {/* <SocialLinks /> */}
             </VStack>
             <div className={cls.gradient} />
         </section>
