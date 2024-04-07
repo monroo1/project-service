@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/widgets/header";
 import { FirstScreen } from "@/widgets/firstScreen";
 import { Footer } from "@/widgets/footer";
 import Providers from "./providers";
@@ -7,7 +6,7 @@ import "./styles/main.scss";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-    title: "Главная",
+    title: "Проект сервис | Мебель",
     description:
         "Проект сервис, производство мебели на заказ в ростове на дону, главная страница сайта, страница каталога, страница портфолио. Проект_сервис",
     viewport: { width: "device-width", initialScale: 1 },
@@ -21,7 +20,6 @@ export default function RootLayout({
     return (
         <html lang="ru">
             <body>
-                {/* <Header /> */}
                 <FirstScreen />
                 <Providers>{children}</Providers>
                 <Script id="yandex-metrika" strategy="afterInteractive">
