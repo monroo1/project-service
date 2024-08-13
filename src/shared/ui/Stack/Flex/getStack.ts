@@ -46,6 +46,7 @@ export interface FlexProps {
     gap?: FlexGap;
     max?: boolean;
     fullHeight?: boolean;
+    onClick?: () => void;
 }
 
 type FlexPropsWithoutChildren = Omit<FlexProps, "children">;

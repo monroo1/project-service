@@ -62,7 +62,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                         height={24}
                         width={24}
                         clickable
-                        onClick={() => router.push("https://vk.com/mebel_ps")}
+                        onClick={() => router.push("https://vk.com/mebelpsrostov")}
                     />
                 </HStack>
             </VStack>
