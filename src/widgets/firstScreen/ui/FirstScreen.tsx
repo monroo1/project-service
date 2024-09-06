@@ -29,12 +29,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                 justify="center"
                 className={classNames(cls.content, {}, ["wrapper"])}
             >
-                <Text title="Производство мебели" size="xxl" align="center" />
-                <Text
-                    text="Мы производим комплексное изготовление корпусной мебели для жилых и коммерческих помещений, обеспечим вас качественным мебельным продуктом собственного производства."
-                    size="xl"
-                    align="center"
-                />
+                <Text title="Производство дизайнерской корпусной мебели" size="xxl" align="center" />
                 <Text
                     title="Обсудить проект"
                     align="center"
