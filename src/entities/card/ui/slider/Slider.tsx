@@ -2,8 +2,6 @@
 import { memo, useRef } from "react";
 import { A11y, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { VStack } from "@/shared/ui/Stack";
 import { IImage } from "@/shared/api/cards/types";
 import cls from "./Slider.module.scss";
 

@@ -1,19 +1,17 @@
 "use client";
-import { memo, useLayoutEffect, useRef, useState } from "react";
+import { memo, useLayoutEffect, useState } from "react";
 import { AxiosResponse } from "axios";
 import { useQuery } from "@tanstack/react-query";
 
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { IResponseGetCards, getCards } from "@/shared/api/cards";
-import { Button } from "@/shared/ui/Button";
 import ReactPaginate from "react-paginate";
 import { Text } from "@/shared/ui/Text";
-import { HStack } from "@/shared/ui/Stack";
-import { IResponseGetCategories, getCategories } from "@/shared/api/caegories";
 
 import { CatalogContent } from "./CatalogContent/CatalogContent";
 
 import cls from "./Catalog.module.scss";
+import { CatalogContentSkeleton } from "./CatalogContent/CatalogContent.skeleton";
 
 interface CatalogProps {
     className?: string;
@@ -22,41 +20,32 @@ interface CatalogProps {
 export const Catalog = memo((props: CatalogProps) => {
     const { className } = props;
     const [page, setPage] = useState(1);
-    const [tab, setTab] = useState(0);
-    const tabPrev = useRef(0);
+    const [init, setInit] = useState(false)
 
     const { data: response, isLoading } = useQuery<
         AxiosResponse<IResponseGetCards>
     >({
-        queryKey: ["cards", page, tab],
+        queryKey: ["cards", page],
         queryFn: () => {
-            if (tabPrev.current !== tab) {
-                setPage(1);
-                return getCards(1, tab);
-            }
-            tabPrev.current = tab;
-            return getCards(page, tab);
+            return getCards(page);
         },
-    });
-
-    const { data: categories, isLoading: isLoadingCategories } = useQuery<
-        AxiosResponse<IResponseGetCategories>
-    >({
-        queryKey: ["categories"],
-        queryFn: () => getCategories(),
     });
 
     const handlePageClick = (event: any) => {
         setPage(event.selected + 1);
     };
 
+
     useLayoutEffect(() => {
-        if (tabPrev.current !== 0) {
+        if(init){
+            setInit(true)
+        } else {
             document
-                .getElementById("catalog")
-                ?.scrollIntoView({ behavior: "smooth" });
+            .getElementById("catalog")
+            ?.scrollIntoView({ behavior: "smooth" });
         }
     }, [page]);
+
 
     return (
         <section
@@ -64,33 +53,9 @@ export const Catalog = memo((props: CatalogProps) => {
             className={classNames(cls.Catalog, {}, [className, "wrapper"])}
         >
             <Text title="Портфолио" size="xl" className={cls.title} />
-            <HStack gap="24" wrap="wrap" className={cls.tabs}>
-                {!isLoadingCategories && categories ? (
-                    <>
-                        <Button
-                            className={cls.tab}
-                            isActiveTab={tab === 0 && true}
-                            onClick={() => setTab(0)}
-                        >
-                            Все
-                        </Button>
-                        {categories.data.data.map((item) => (
-                            <Button
-                                key={item.id}
-                                className={cls.tab}
-                                isActiveTab={tab === item.id && true}
-                                onClick={() => setTab(item.id)}
-                            >
-                                {item.attributes.Name}
-                            </Button>
-                        ))}
-                    </>
-                ) : (
-                    <div>Загрузка категорий...</div>
-                )}
-            </HStack>
+            
             {isLoading ? (
-                <div>Загрузка...</div>
+                <CatalogContentSkeleton />
             ) : (
                 <>
                     <CatalogContent
