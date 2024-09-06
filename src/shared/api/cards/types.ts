@@ -1,4 +1,3 @@
-import { ICategory } from "../caegories";
 
 export interface IImage {
     id: number;
@@ -14,9 +13,6 @@ export interface ICard {
         Name: string;
         Description: string;
         Date: string;
-        Category: {
-            data: ICategory[];
-        };
         Images: {
             data: IImage[];
         };
