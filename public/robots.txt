@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://xn--b1afanhwgieieg.online
+Host: https://proekt-service.online
 
 # Sitemaps
-Sitemap: https://xn--b1afanhwgieieg.online/sitemap.xml
+Sitemap: https://proekt-service.online/sitemap.xml

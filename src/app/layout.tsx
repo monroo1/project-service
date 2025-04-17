@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description:
         "Проект сервис, производство мебели на заказ в ростове на дону, главная страница сайта, страница каталога, страница портфолио. Проект_сервис",
     viewport: { width: "device-width", initialScale: 1 },
+    other: {
+        ['yandex-verification']: '852fe35684f4a70e',
+    },
 };
 
 export default function RootLayout({
