@@ -44,12 +44,13 @@ export const Header = memo((props: HeaderProps) => {
     return (
         <header
             id="header"
-            className={classNames(cls.Header, {}, [
+            className={cls.Header}
+        >
+            <div className={classNames("", {}, [
                 className,
                 "wrapper",
                 getStack({ justify: "between", direction: "row" }),
-            ])}
-        >
+            ])}>
             <AppLogo />
             <HStack gap="40" className={cls.nav}>
                 <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
@@ -86,12 +87,12 @@ export const Header = memo((props: HeaderProps) => {
 
                         <div>
                             <HStack gap="8">
-                                <Icon
+                                {/* <Icon
                                     Svg={PhoneIcon}
                                     inverted
                                     width={22}
                                     height={22}
-                                />
+                                /> */}
                                 <a
                                     href="tel:+79885105252"
                                     className={cls.phone}
@@ -104,11 +105,13 @@ export const Header = memo((props: HeaderProps) => {
                 )}
             </div>
             <HStack gap="8" className={cls.socialPhone}>
-                <Icon Svg={PhoneIcon} inverted width={22} height={22} />
+                {/* <Icon Svg={PhoneIcon} inverted width={22} height={22} /> */}
                 <a href="tel:+79885105252" className={cls.phone}>
                     <Text text="+7 988 510-52-52" size="xxl" />
                 </a>
             </HStack>
+            </div>
         </header>
+        
     );
 });

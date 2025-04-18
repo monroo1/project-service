@@ -23,16 +23,17 @@ export const Card = memo((props: CardProps) => {
     return (
         <>
             <Slider images={props.attributes.Images.data} isOpen={isOpen} handleChangeVisibility={handleToggleVisibleModal}/>
-            <VStack gap="24" className={classNames(cls.Card, {}, [className])} onClick={handleToggleVisibleModal}>
-                <Text className={cls.title} title={props.attributes.Name} size="s" />
+            <VStack gap="16" className={classNames(cls.Card, {}, [className])} onClick={handleToggleVisibleModal}>
+                
                 <div className={cls.container}>
                     <img
                         src={process.env.NEXT_PUBLIC_IMAGE_URL + props.attributes.Images.data[0].attributes.url}
                         alt={props.attributes.Images.data[0].attributes.name}
                     />
                 </div>
+                <Text title={props.attributes.Name} size="s" />
                 
-                <Text text="Смотреть проект" />
+                <Text className={cls.btn} text="Смотреть проект" />
             </VStack>
         </>
     );

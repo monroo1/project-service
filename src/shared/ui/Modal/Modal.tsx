@@ -11,11 +11,9 @@ interface IModalProps {
     onClose: () => void;
     children: ReactNode;
     isOpen: boolean;
-    navigationNext: RefObject<HTMLDivElement>;
-    navigationPrev: RefObject<HTMLDivElement>;
 }
 
-export const Modal = ({ onClose, children, isOpen, navigationNext, navigationPrev }: IModalProps) => {
+export const Modal = ({ onClose, children, isOpen}: IModalProps) => {
     const handleCloseClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.preventDefault();
         onClose();
@@ -25,12 +23,6 @@ export const Modal = ({ onClose, children, isOpen, navigationNext, navigationPre
         <div className="modal-overlay" onClick={handleCloseClick}>
             <Icon className="closeIcon" Svg={CloseIcon} />
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <div ref={navigationPrev} className="prev">
-                    <ArrowButton fill />
-                </div>
-                <div ref={navigationNext} className="next">
-                    <ArrowButton fill />
-                </div>
                 {children}
             </div>
         </div>

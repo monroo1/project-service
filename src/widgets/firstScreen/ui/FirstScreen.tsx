@@ -29,14 +29,16 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                 justify="center"
                 className={classNames(cls.content, {}, ["wrapper"])}
             >
-                <Text title="Производство дизайнерской корпусной мебели" size="xxl" align="center" />
-                <Text
+                <div>
+                    <Text className={cls.title} title="Производство дизайнерской корпусной мебели" size="xxl" align="left" />
+                </div>
+                {/* <Text
                     title="Обсудить проект"
                     align="center"
                     size="s"
                     className={cls.info}
-                />
-                <HStack className={cls.links} gap="24">
+                /> */}
+                {/* <HStack className={cls.links} gap="24">
                     <Icon
                         Svg={WaLogo}
                         height={24}
@@ -59,7 +61,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                         clickable
                         onClick={() => router.push("https://vk.com/mebelpsrostov")}
                     />
-                </HStack>
+                </HStack> */}
             </VStack>
             <div className={cls.gradient} />
         </section>

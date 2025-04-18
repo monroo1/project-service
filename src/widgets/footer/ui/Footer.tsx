@@ -57,7 +57,6 @@ export const Footer = memo((props: FooterProps) => {
                 </HStack>
                 <VStack gap="32">
                     <HStack gap="8">
-                        <Icon Svg={PhoneIcon} inverted width={22} height={22} />
                         <a href="tel:+79885105252" className={cls.phone}>
                             <Text text="+7 988 510-52-52" size="xxl" />
                         </a>
@@ -66,7 +65,7 @@ export const Footer = memo((props: FooterProps) => {
                 </VStack>
             </HStack>
             <HStack className={cls.bottom} justify="center">
-                <Text text="© 2024 Проект сервис" />
+                <Text text="© 2025 Проект сервис" />
             </HStack>
         </footer>
     );

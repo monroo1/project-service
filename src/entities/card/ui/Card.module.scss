@@ -14,7 +14,7 @@
         overflow: hidden;
 
         width: 100%;
-        padding-bottom: 56.25%; // 16:9 aspect ratio (9 / 16 * 100)
+        padding-bottom: 130%; // 16:9 aspect ratio (9 / 16 * 100)
 
         background: #000; // optional, for background color
 
@@ -30,7 +30,7 @@
         }
     }
 
-    .title {
-        align-self: center;
+    .btn {
+        color: var(--secondary-color)
     }
 }

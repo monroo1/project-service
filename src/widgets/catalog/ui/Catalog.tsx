@@ -37,7 +37,7 @@ export const Catalog = memo((props: CatalogProps) => {
 
 
     useLayoutEffect(() => {
-        if(init){
+        if(!init){
             setInit(true)
         } else {
             document

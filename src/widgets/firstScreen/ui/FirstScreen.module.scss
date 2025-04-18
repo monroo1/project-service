@@ -1,31 +1,28 @@
 .FirstScreen {
     position: relative;
+
     min-height: 687px;
-    
 
-    // background-image: url("../../../shared/assets/background/firstScreen.jpeg");
-    // background-repeat: no-repeat;
-    // background-position: center 25%;
-    // background-size: cover;
-
-    background-color: #CBB59C;
+    background-color: #cbb59cb7;
+    background-image: url("../../../shared/assets/bg2.jpg");
+    background-repeat: no-repeat;
+    background-position: 75% 75%;
+    background-size: cover;
 
     .gradient {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-            0deg,
-            rgb(0 0 0 / 20%) -13.19%,
-            rgb(0 0 0 / 85%) 94.01%
-        );
+        background: linear-gradient(90deg, rgb(0 0 0 / 70%) 25%, rgb(0 0 0 / 15%) 100%);
+
     }
 
     .content {
         position: relative;
         z-index: 2;
 
-        max-width: 45vw;
-        margin-top: 12vh;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        margin-top: 20vh;
 
         color: white;
         text-align: center;
@@ -48,6 +45,11 @@
     .info {
         color: white;
     }
+
+    .title {
+        max-width: 45%;
+        margin-left: 60px;
+    }
 }
 /* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-width: 810px) {
@@ -64,6 +66,11 @@
     .FirstScreen {
         .content {
             padding: 0 24px;
+        }
+
+        .title {
+            max-width: 100%;
+            margin-left: 0;
         }
     }
 }

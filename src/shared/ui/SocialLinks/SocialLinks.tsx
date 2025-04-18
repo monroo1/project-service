@@ -3,11 +3,11 @@ import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { HStack } from "../Stack";
 import { Icon } from "../Icon";
-import WaLogo from "../../assets/icons/WaLogo.svg";
+import WaLogo from "../../assets/icons/whatsapp.svg";
 import VkLogo from "../../assets/icons/VkLogo.svg";
+import TgLogo from "../../assets/icons/telegram.svg";
 import { Text } from "../Text";
 import cls from "./SocialLinks.module.scss";
-import { useRouter } from "next/navigation";
 
 interface SocialLinksProps {
     className?: string;
@@ -16,7 +16,6 @@ interface SocialLinksProps {
 
 export const SocialLinks = memo((props: SocialLinksProps) => {
     const { className, footer = false } = props;
-    const router = useRouter();
 
     const Links = () => (
         <HStack
@@ -28,14 +27,21 @@ export const SocialLinks = memo((props: SocialLinksProps) => {
                 height={24}
                 width={24}
                 clickable
-                onClick={() => router.push("https://wa.me/79889429790")}
+                onClick={() => window.open("https://wa.me/79885105252", "_blank")}
             />
             <Icon
                 Svg={VkLogo}
                 height={24}
                 width={24}
                 clickable
-                onClick={() => router.push("https://vk.com/mebelpsrostov")}
+                onClick={() => window.open("https://vk.com/ps_mebel", "_blank")}
+            />
+            <Icon
+                Svg={TgLogo}
+                height={24}
+                width={24}
+                clickable
+                onClick={() => window.open("https://t.me/proekt_servis", "_blank")}
             />
         </HStack>
     );
