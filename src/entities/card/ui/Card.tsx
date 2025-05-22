@@ -20,8 +20,6 @@ export const Card = memo((props: CardProps) => {
 
     const handleToggleVisibleModal = () => setIsOpen((prev) => !prev)
 
-    console.log(props)
-
     return (
         <>
             <Slider images={props.Images} isOpen={isOpen} handleChangeVisibility={handleToggleVisibleModal}/>
