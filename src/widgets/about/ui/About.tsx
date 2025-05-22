@@ -22,11 +22,11 @@ export const About = memo((props: AboutProps) => {
             ])}
             id="about"
         >
-            <Text
+            {/* <Text
                 title="Проект Сервис – создан выполнять объектные задачи комплексной меблировки жилых и коммерческих помещений."
                 align="center"
                 size="l"
-            />
+            /> */}
             <div className={cls.content}>
                 <HStack gap="16" align="start" className={cls.firstItem}>
                     <div>

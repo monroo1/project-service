@@ -61,7 +61,8 @@ export const Footer = memo((props: FooterProps) => {
                             <Text text="+7 988 510-52-52" size="xxl" />
                         </a>
                     </HStack>
-                    <Button onClick={handleRouteToForm}>Оставить заявку</Button>
+                    <Text className={cls.address} text="г. Ростов-на-Дону, ул. Профсоюзная 74, 3 этаж" size="xl" />
+                    {/* <Button onClick={handleRouteToForm}>Оставить заявку</Button> */}
                 </VStack>
             </HStack>
             <HStack className={cls.bottom} justify="center">

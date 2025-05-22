@@ -1,5 +1,6 @@
 .Advantages {
     padding: 140px 20px;
+    padding-top: 0;
     color: var(--text-color);
 
     & > div:first-child {
@@ -30,13 +31,35 @@
 
         & > div:first-child {
             position: relative;
-            width: 50%;
+
+            display: flex;
+            justify-content: center;
+
+            width: 20%;
+
             color: rgb(40 43 34 / 30%);
+            
+
+            
+
             transition: all 0.3s ease-in-out;
+
+            & h4 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 60px;
+                height: 60px;
+
+                background-image: url("/assets/circle.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
         }
 
         & > div:last-child {
-            width: 50%;
+            width: 80%;
             height: 100%;
             padding-bottom: 60px;
             padding-left: 40px;
@@ -73,39 +96,17 @@
     .imageWrapper {
         display: none;
     }
-
-    .Advantages {
-        .item {
-            & > div:first-child {
-                width: 30%;
-            }
-
-            & > div:last-child {
-                width: 70%;
-            }
-        }
-    }
 }
 
 /* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-width: 600px) {
     .Advantages {
         padding: 70px 24px;
+        padding-top: 0;
 
         & > div:first-child {
             padding: 0;
             padding-bottom: 40px;
-        }
-
-        .item {
-            & > div:first-child {
-                display: none;
-            }
-
-            & > div:last-child {
-                width: 100%;
-                border-left: none;
-            }
         }
     }
 }

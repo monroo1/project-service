@@ -30,7 +30,7 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                 className={classNames(cls.content, {}, ["wrapper"])}
             >
                 <div>
-                    <Text className={cls.title} title="Производство дизайнерской корпусной мебели" size="xxl" align="left" />
+                    <Text className={cls.title} title="Кухни на заказ Ростов-на-Дону" size="xxl" align="left" />
                 </div>
                 {/* <Text
                     title="Обсудить проект"

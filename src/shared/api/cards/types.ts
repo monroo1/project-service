@@ -1,22 +1,16 @@
 
 export interface IImage {
     id: number;
-    attributes: {
-        name: string;
-        url: string;
-    };
+    name: string;
+    url: string;
 }
 
 export interface ICard {
     id: number;
-    attributes: {
-        Name: string;
-        Description: string;
-        Date: string;
-        Images: {
-            data: IImage[];
-        };
-    };
+    Name: string;
+    Description: string;
+    Date: string;
+    Images:  IImage[];
 }
 
 export interface IResponseGetCards {

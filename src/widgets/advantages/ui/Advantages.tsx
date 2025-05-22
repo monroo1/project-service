@@ -26,13 +26,13 @@ export const Advantages = memo((props: AdvantagesProps) => {
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="01" />
-                        <div className={cls.imageWrapper}>
+                        {/* <div className={cls.imageWrapper}>
                             <Image
                                 src={document}
                                 alt="Подписание договора"
                                 fill
                             />
-                        </div>
+                        </div> */}
                     </HStack>
                     <VStack max gap="8">
                         <Text title="Подписание договора" />
@@ -45,9 +45,9 @@ export const Advantages = memo((props: AdvantagesProps) => {
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="02" />
-                        <div className={cls.imageWrapper}>
+                        {/* <div className={cls.imageWrapper}>
                             <Image src={chy} alt="Изготовление" fill />
-                        </div>
+                        </div> */}
                     </HStack>
                     <VStack max gap="8">
                         <Text title="Изготовление" />
@@ -60,9 +60,9 @@ export const Advantages = memo((props: AdvantagesProps) => {
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="03" />
-                        <div className={cls.imageWrapper}>
+                        {/* <div className={cls.imageWrapper}>
                             <Image src={installation} alt="Установка" fill />
-                        </div>
+                        </div> */}
                     </HStack>
                     <VStack max gap="8">
                         <Text title="Установка" />
@@ -75,9 +75,9 @@ export const Advantages = memo((props: AdvantagesProps) => {
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
                         <Text title="04" />
-                        <div className={cls.imageWrapper}>
+                        {/* <div className={cls.imageWrapper}>
                             <Image src={housewarming} alt="Новоселье" fill />
-                        </div>
+                        </div> */}
                     </HStack>
                     <VStack max gap="8">
                         <Text title="Новоселье" />

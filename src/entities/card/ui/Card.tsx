@@ -20,18 +20,20 @@ export const Card = memo((props: CardProps) => {
 
     const handleToggleVisibleModal = () => setIsOpen((prev) => !prev)
 
+    console.log(props)
+
     return (
         <>
-            <Slider images={props.attributes.Images.data} isOpen={isOpen} handleChangeVisibility={handleToggleVisibleModal}/>
+            <Slider images={props.Images} isOpen={isOpen} handleChangeVisibility={handleToggleVisibleModal}/>
             <VStack gap="16" className={classNames(cls.Card, {}, [className])} onClick={handleToggleVisibleModal}>
                 
                 <div className={cls.container}>
                     <img
-                        src={process.env.NEXT_PUBLIC_IMAGE_URL + props.attributes.Images.data[0].attributes.url}
-                        alt={props.attributes.Images.data[0].attributes.name}
+                        src={process.env.NEXT_PUBLIC_IMAGE_URL + props.Images[0].url}
+                        alt={props.Images[0].name}
                     />
                 </div>
-                <Text title={props.attributes.Name} size="s" />
+                <Text title={props.Name} size="s" />
                 
                 <Text className={cls.btn} text="Смотреть проект" />
             </VStack>

@@ -24,12 +24,23 @@
 
   overflow: hidden;
 
-  width: 95vw;
-  max-width: calc(95vh * 9 / 16);
-  max-height: 95vh;
+  // width: 95vw;
+  // max-width: calc(95vh * 9 / 16);
+  // max-height: 95vh;
   
 
+  width: 100%;
+  max-width: 90%;
+  height: 100%;
+  max-height: 100%;
+
+  // padding: 20px;
+  
   background: transparent;
+}
+
+.prev, .next {
+  display: none;
 }
 
 .closeIcon {
@@ -50,4 +61,23 @@
     &:hover {
         opacity: 0.6;
     }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (min-width: 880px) {
+  .prev, .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    display: block;
+  }
+  
+  .prev {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .next {
+    right: 0;
+  }
 }

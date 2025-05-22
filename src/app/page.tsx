@@ -7,9 +7,9 @@ export default function Home() {
     return (
         <main>
             <Catalog />
+            <Advantages />
             <StagesWork />
             <About />
-            <Advantages />
         </main>
     );
 }
