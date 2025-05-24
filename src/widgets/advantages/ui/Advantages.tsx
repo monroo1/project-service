@@ -25,7 +25,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
             <VStack gap="24">
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
-                        <Text title="01" />
+                        <Text size="s" title="01" />
                         {/* <div className={cls.imageWrapper}>
                             <Image
                                 src={document}
@@ -35,73 +35,69 @@ export const Advantages = memo((props: AdvantagesProps) => {
                         </div> */}
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Подписание договора" />
+                        {/* <Text title="Подписание договора" /> */}
                         <Text
-                            text="Определяемся с бюджетом, материалами и фурнитурой. Вносим правки в проект, подписываем пакет документов"
-                            size="l"
+                            text="Встреча с дизайнером для предварительного замера, обсуждения проекта, выбора материалов"
+                            size="xl"
                         />
                     </VStack>
                 </HStack>
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
-                        <Text title="02" />
+                        <Text size="s" title="02" />
                         {/* <div className={cls.imageWrapper}>
                             <Image src={chy} alt="Изготовление" fill />
                         </div> */}
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Изготовление" />
                         <Text
-                            text="После подписания договора и определения сроков команда Проект сервис приступает к самому интересному – производству!"
-                            size="l"
+                            text="Разработка проекта, согласование эскизов, выбор дизайнерских решений"
+                            size="xl"
                         />
                     </VStack>
                 </HStack>
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
-                        <Text title="03" />
+                        <Text size="s" title="03" />
                         {/* <div className={cls.imageWrapper}>
                             <Image src={installation} alt="Установка" fill />
                         </div> */}
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Установка" />
                         <Text
-                            text="По готовности производства приступаем к монтажу на объекте. В оговоренное время выполняем доставку и монтаж"
-                            size="l"
+                            text="Подготовка коммерческого предложения, согласование стоимости проекта, подписание договора"
+                            size="xl"
                         />
                     </VStack>
                 </HStack>
                 <HStack className={cls.item} align="start">
                     <HStack align="start">
-                        <Text title="04" />
+                        <Text size="s" title="04" />
                         {/* <div className={cls.imageWrapper}>
                             <Image src={housewarming} alt="Новоселье" fill />
                         </div> */}
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Новоселье" />
                         <Text
-                            text="По окончании делаем проверку и подписываем акт окончания работ"
-                            size="l"
+                            text="Контрольный замер"
+                            size="xl"
                         />
                     </VStack>
                 </HStack>
-                {/* <HStack className={cls.item} align="start">
+                <HStack className={cls.item} align="start">
                     <HStack align="start">
-                        <Text title="05" />
-                        <div className={cls.imageWrapper}>
-                            <Image src={image} alt="Выгода" fill />
-                        </div>
+                        <Text size="s" title="05" />
+                        {/* <div className={cls.imageWrapper}>
+                            <Image src={housewarming} alt="Новоселье" fill />
+                        </div> */}
                     </HStack>
                     <VStack max gap="8">
-                        <Text title="Выгода" />
                         <Text
-                            text="Мы отказались от шоу-рума и офиса в пользу стоимости и мобильности. "
-                            size="l"
+                            text="Изготовление и монтаж"
+                            size="xl"
                         />
                     </VStack>
-                </HStack> */}
+                </HStack>
             </VStack>
         </section>
     );

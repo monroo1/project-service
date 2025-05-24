@@ -2,13 +2,9 @@
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./FirstScreen.module.scss";
-import { HStack, VStack } from "@/shared/ui/Stack";
+import { VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text";
 import { useRouter } from "next/navigation";
-import { Icon } from "@/shared/ui/Icon";
-
-import WaLogo from "@/shared/assets/icons/WaLogo.svg";
-import VkLogo from "@/shared/assets/icons/VkLogo.svg";
 import { Header } from "@/widgets/header";
 
 interface FirstScreenProps {

@@ -6,9 +6,9 @@ import "./styles/main.scss";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-    title: "Проект сервис | Мебель",
+    title: "Проект сервис | Кухни",
     description:
-        "Проект сервис, производство мебели на заказ в ростове на дону, главная страница сайта, страница каталога, страница портфолио. Проект_сервис",
+        "Проект сервис - кухни на заказ Ростов-на-Дону",
     viewport: { width: "device-width", initialScale: 1 },
     other: {
         ['yandex-verification']: '852fe35684f4a70e',
