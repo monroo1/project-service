@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         "Проект сервис - кухни на заказ Ростов-на-Дону",
     viewport: { width: "device-width", initialScale: 1 },
     other: {
-        ['yandex-verification']: '852fe35684f4a70e',
+        ['yandex-verification']: 'f89d134a7e19168b',
     },
 };
 
