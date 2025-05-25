@@ -105,5 +105,17 @@
             padding: 0;
             padding-bottom: 40px;
         }
+
+        .item {
+            & > div:first-child  h5{
+                width: 40px;
+                height: 40px;
+            }
+
+            & > div:last-child {
+                height: 80px;
+                padding-left: 24px;
+            }
+        }
     }
 }
