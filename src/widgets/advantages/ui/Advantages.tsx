@@ -34,7 +34,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             />
                         </div> */}
                     </HStack>
-                    <VStack max gap="8">
+                    <VStack justify="center" max gap="8">
                         {/* <Text title="Подписание договора" /> */}
                         <Text
                             text="Встреча с дизайнером для предварительного замера, обсуждения проекта, выбора материалов"
@@ -49,7 +49,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             <Image src={chy} alt="Изготовление" fill />
                         </div> */}
                     </HStack>
-                    <VStack max gap="8">
+                    <VStack justify="center" max gap="8">
                         <Text
                             text="Разработка проекта, согласование эскизов, выбор дизайнерских решений"
                             size="xl"
@@ -63,7 +63,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             <Image src={installation} alt="Установка" fill />
                         </div> */}
                     </HStack>
-                    <VStack max gap="8">
+                    <VStack justify="center" max gap="8">
                         <Text
                             text="Подготовка коммерческого предложения, согласование стоимости проекта, подписание договора"
                             size="xl"
@@ -77,7 +77,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             <Image src={housewarming} alt="Новоселье" fill />
                         </div> */}
                     </HStack>
-                    <VStack max gap="8">
+                    <VStack justify="center" max gap="8">
                         <Text
                             text="Контрольный замер"
                             size="xl"
@@ -91,7 +91,7 @@ export const Advantages = memo((props: AdvantagesProps) => {
                             <Image src={housewarming} alt="Новоселье" fill />
                         </div> */}
                     </HStack>
-                    <VStack max gap="8">
+                    <VStack justify="center" max gap="8">
                         <Text
                             text="Изготовление и монтаж"
                             size="xl"
