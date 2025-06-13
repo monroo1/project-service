@@ -62,7 +62,10 @@ export const Footer = memo((props: FooterProps) => {
                             <Text text="+7 988 510-52-52" size="xxl" />
                         </a>
                     </HStack>
-                    <Text className={cls.address} text="г. Ростов-на-Дону, ул. Профсоюзная 74, 3 этаж" size="xl" />
+                    <VStack className={cls.address}>
+                        <Text text="г. Ростов-на-Дону," size="xl" />
+                        <Text text="ул. Профсоюзная 74, 3 этаж" size="xl" />
+                    </VStack>
                     {/* <Button onClick={handleRouteToForm}>Оставить заявку</Button> */}
                 </VStack>
             </HStack>

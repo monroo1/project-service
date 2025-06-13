@@ -2,7 +2,7 @@
 import { memo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./FirstScreen.module.scss";
-import { VStack } from "@/shared/ui/Stack";
+import { HStack, VStack } from "@/shared/ui/Stack";
 import { Text } from "@/shared/ui/Text";
 import { useRouter } from "next/navigation";
 import { Header } from "@/widgets/header";
@@ -25,9 +25,25 @@ export const FirstScreen = memo((props: FirstScreenProps) => {
                 justify="center"
                 className={classNames(cls.content, {}, ["wrapper"])}
             >
-                <div>
-                    <Text className={cls.title} title="Кухни на заказ Ростов-на-Дону" size="xxl" align="left" />
-                </div>
+                <HStack>
+                    <VStack className={cls.leftContent}>
+                        <Text title="КУХНИ" size="xxl" align="left" />
+                        <Text title="от производителя" size="l" align="left" />
+                        <Text title="Ростов-на-Дону" size="l" align="left" />
+                    </VStack>
+                    <VStack  className={cls.rightContent}>
+                        <VStack gap="16">
+                            <Text className={cls.title} title="БЕСПЛАТНО" size="xl" align="left" />
+                            <Text className={cls.title} text="Выезд дизайнера для выбора материалов" size="xxl" align="left" />
+                            <Text className={cls.title} text="Замер помещения" size="xxl" align="left" />
+                            <Text className={cls.title} text="Разработка проекта" size="xxl" align="left" />
+                        </VStack>
+                        <a href="tel:+79885105252" className={cls.count}>
+                            <Text title="РАССЧИТАТЬ СТОИМОСТЬ" size="l" align="left" />
+                        </a>
+                    </VStack>
+
+                </HStack>
                 {/* <Text
                     title="Обсудить проект"
                     align="center"

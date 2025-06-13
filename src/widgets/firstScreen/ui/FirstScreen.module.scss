@@ -12,20 +12,76 @@
     .gradient {
         position: absolute;
         inset: 0;
-        background: linear-gradient(90deg, rgb(0 0 0 / 70%) 25%, rgb(0 0 0 / 15%) 100%);
-
+        background: linear-gradient(90deg, rgb(0 0 0 / 40%) 25%, rgb(0 0 0 / 15%) 100%);
     }
 
     .content {
-        position: relative;
+        position: absolute;
         z-index: 2;
+        inset: 90px 0 0;
 
-        width: calc(100% - 60px);
         margin: 0 auto;
-        margin-top: 20vh;
 
         color: white;
         text-align: center;
+
+        & > div {
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+    }
+
+    .leftContent {
+        align-self: flex-start;
+        width: 50%;
+
+        & > div:first-child {
+            margin-bottom: 16px;
+
+            & > h1 {
+                font-size: 190px;
+            }
+        }
+
+        & > div:not(:first-child) > h3{
+            font-size: 50px;
+        }   
+    }
+
+    .rightContent {
+        align-self: flex-end;
+        width: 50%;
+
+        & > div:first-child {
+            align-self: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            max-width: 335px;
+
+            & > h2 {
+                font-size: 55px;
+                font-weight: bold;
+            }
+
+            & > p {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .count {
+        cursor: pointer;
+
+        align-self: flex-end;
+
+        padding: 8px 12px;
+
+        color: white;
+
+        background-color: var(--secondary-color);
+        border-radius: 8px;
     }
 
     .links {
@@ -45,18 +101,93 @@
     .info {
         color: white;
     }
+}
 
-    .title {
-        max-width: 55%;
-        margin-left: 60px;
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 1240px) {
+    .FirstScreen {
+        .content {
+            padding: 0 20px;
+        }
     }
 }
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 1050px) {
+    .FirstScreen {
+        .count h3 {
+            font-size: 30px;
+        }
+
+        .leftContent {
+            & > div:first-child > h1 {
+                font-size: 160px;
+            }
+
+            & > div:not(:first-child) > h3{
+                font-size: 42px;
+            }   
+        }
+    }
+}
+
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 910px) {
+    .FirstScreen {
+        .content {
+            & > div {
+                flex-direction: column;
+                justify-content: space-between;
+                height: calc(100% + 40px);
+                padding-bottom: 20px;
+            }
+        }
+
+        .leftContent {
+            width: 100%;
+        }
+
+        .rightContent {
+            align-items: flex-end;
+            width: 100%;
+        }
+    }
+}
+
 /* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-width: 810px) {
     .FirstScreen {
         .content {
             max-width: 100%;
-            padding: 0 64px;
+        }
+
+        .leftContent {
+            & > div:first-child > h1 {
+                font-size: 120px;
+            }
+
+            & > div:not(:first-child) > h3{
+                font-size: 36px;
+            }   
+        }
+
+        .rightContent {
+            & > div:first-child {
+                margin-bottom: 24px;
+            }
+    
+            .title {
+                max-width: 260px;
+
+                & > h2 {
+                    font-size: 42px;
+                }
+    
+                & > p {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
@@ -64,13 +195,33 @@
 /* stylelint-disable-next-line media-feature-range-notation */
 @media screen and (max-width: 600px) {
     .FirstScreen {
-        .content {
-            padding: 0 24px;
+        .count h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 475px) {
+    .FirstScreen {
+        .leftContent {
+            & > div:first-child > h1 {
+                font-size: 100px;
+            }
         }
 
-        .title {
-            max-width: 100%;
-            margin-left: 0;
+        .rightContent {
+            .title {
+                max-width: 200px;
+
+                & > h2 {
+                    font-size: 32px;
+                }
+    
+                & > p {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
