@@ -13,7 +13,6 @@ import {
     getRouteStagesWork,
 } from "@/shared/const/router";
 import { Icon } from "@/shared/ui/Icon";
-import PhoneIcon from "@/shared/assets/icons/phoneIcon.svg";
 import { Text } from "@/shared/ui/Text";
 import BurgerIcon from "@/shared/assets/icons/feather_menu.svg";
 
@@ -42,76 +41,89 @@ export const Header = memo((props: HeaderProps) => {
     }, []);
 
     return (
-        <header
-            id="header"
-            className={cls.Header}
-        >
-            <div className={classNames("", {}, [
-                className,
-                "wrapper",
-                getStack({ justify: "between", direction: "row" }),
-            ])}>
-            <AppLogo />
-            <HStack gap="40" className={cls.nav}>
-                <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
-                <AppLink href={getRouteAbout()}>О нас</AppLink>
-                <AppLink href={getRouteAdvantages()}>Преимущества</AppLink>
-                <AppLink href={getRouteStagesWork()}>Этапы работы</AppLink>
-            </HStack>
+        <header id="header" className={cls.Header}>
+            <div
+                className={classNames("", {}, [
+                    className,
+                    "wrapper",
+                    getStack({ justify: "between", direction: "row" }),
+                ])}
+            >
+                <AppLogo />
+                <HStack gap="40" className={cls.nav}>
+                    <AppLink href={getRouteCatalog()}>Портфолио</AppLink>
+                    <AppLink href={getRouteAbout()}>О нас</AppLink>
+                    <AppLink href={getRouteAdvantages()}>Преимущества</AppLink>
+                    <AppLink href={getRouteStagesWork()}>Этапы работы</AppLink>
+                </HStack>
 
-            <div className={cls.linksMobile}>
-                <SocialLinks className={cls.social} />
-                <Icon
-                    Svg={BurgerIcon}
-                    width={34}
-                    height={34}
-                    className={cls.burgerIcon}
-                    clickable
-                    onClick={() => setOpen((prev) => !prev)}
-                    ref={rootRef}
-                />
-                {isOpen && (
-                    <div className={cls.burgerMenu}>
-                        <VStack gap="24">
-                            <AppLink href={getRouteCatalog()}>
-                                Портфолио
-                            </AppLink>
-                            <AppLink href={getRouteAbout()}>О нас</AppLink>
-                            <AppLink href={getRouteAdvantages()}>
-                                Преимущества
-                            </AppLink>
-                            <AppLink href={getRouteStagesWork()}>
-                                Этапы работы
-                            </AppLink>
-                        </VStack>
+                <div className={cls.linksMobile}>
+                    <VStack gap="4">
+                        <HStack gap="16">
+                            <SocialLinks className={cls.social} />
+                            <Icon
+                                Svg={BurgerIcon}
+                                width={34}
+                                height={34}
+                                className={cls.burgerIcon}
+                                clickable
+                                onClick={() => setOpen((prev) => !prev)}
+                                ref={rootRef}
+                            />
+                        </HStack>
+                        <a
+                            href="tel:+79885105252"
+                            className={classNames(cls.phone, {}, [
+                                cls.mobilePhone,
+                            ])}
+                        >
+                            <Text text="+7 988 510-52-52" size="xxl" />
+                        </a>
+                    </VStack>
+                    {isOpen && (
+                        <div className={cls.burgerMenu}>
+                            <VStack gap="24">
+                                <AppLink href={getRouteCatalog()}>
+                                    Портфолио
+                                </AppLink>
+                                <AppLink href={getRouteAbout()}>О нас</AppLink>
+                                <AppLink href={getRouteAdvantages()}>
+                                    Преимущества
+                                </AppLink>
+                                <AppLink href={getRouteStagesWork()}>
+                                    Этапы работы
+                                </AppLink>
+                            </VStack>
 
-                        <div>
-                            <HStack gap="8">
-                                {/* <Icon
+                            <div>
+                                <HStack gap="8">
+                                    {/* <Icon
                                     Svg={PhoneIcon}
                                     inverted
                                     width={22}
                                     height={22}
                                 /> */}
-                                <a
-                                    href="tel:+79885105252"
-                                    className={cls.phone}
-                                >
-                                    <Text text="+7 988 510-52-52" size="xxl" />
-                                </a>
-                            </HStack>
+                                    <a
+                                        href="tel:+79885105252"
+                                        className={cls.phone}
+                                    >
+                                        <Text
+                                            text="+7 988 510-52-52"
+                                            size="xxl"
+                                        />
+                                    </a>
+                                </HStack>
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
-            <HStack gap="8" className={cls.socialPhone}>
-                {/* <Icon Svg={PhoneIcon} inverted width={22} height={22} /> */}
-                <a href="tel:+79885105252" className={cls.phone}>
-                    <Text text="+7 988 510-52-52" size="xxl" />
-                </a>
-            </HStack>
+                    )}
+                </div>
+                <HStack gap="8" className={cls.socialPhone}>
+                    {/* <Icon Svg={PhoneIcon} inverted width={22} height={22} /> */}
+                    <a href="tel:+79885105252" className={cls.phone}>
+                        <Text text="+7 988 510-52-52" size="xxl" />
+                    </a>
+                </HStack>
             </div>
         </header>
-        
     );
 });

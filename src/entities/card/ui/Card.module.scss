@@ -8,6 +8,14 @@
 
     color: var(--text-color);
 
+    & > div {
+        width: 100%; 
+    }
+
+    & > a {
+        width: 100%;
+    }
+
     .container {
         position: relative;
 
@@ -28,9 +36,5 @@
 
             object-fit: cover;
         }
-    }
-
-    .btn {
-        color: var(--secondary-color)
     }
 }

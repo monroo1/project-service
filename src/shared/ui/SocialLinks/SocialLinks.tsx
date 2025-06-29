@@ -22,27 +22,15 @@ export const SocialLinks = memo((props: SocialLinksProps) => {
             gap={footer ? "8" : "16"}
             className={classNames("", {}, [className])}
         >
-            <Icon
-                Svg={WaLogo}
-                height={24}
-                width={24}
-                clickable
-                onClick={() => window.open("https://wa.me/79885105252", "_blank")}
-            />
-            <Icon
-                Svg={VkLogo}
-                height={24}
-                width={24}
-                clickable
-                onClick={() => window.open("https://vk.com/ps_mebel", "_blank")}
-            />
-            <Icon
-                Svg={TgLogo}
-                height={24}
-                width={24}
-                clickable
-                onClick={() => window.open("https://t.me/proekt_servis", "_blank")}
-            />
+            <a href="https://wa.me/79885105252" target="_blank">
+                <Icon Svg={WaLogo} height={24} width={24} />
+            </a>
+            <a href="https://vk.com/ps_mebel" target="_blank">
+                <Icon Svg={VkLogo} height={24} width={24} />
+            </a>
+            <a href="https://t.me/proekt_servis" target="_blank">
+                <Icon Svg={TgLogo} height={24} width={24} />
+            </a>
         </HStack>
     );
 

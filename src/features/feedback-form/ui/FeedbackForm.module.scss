@@ -1,0 +1,80 @@
+.SendForm {
+  margin-top: 20px;
+
+  & button {
+      margin-top: 20px;
+  }
+}
+
+.thanks {
+  margin-top: 60px;
+  color: white;
+
+  & button {
+      margin-top: 80px;
+  }
+}
+
+.personalData {
+  max-width: 300px;
+  color: white;
+
+  & circle {
+      color: white;
+  }
+}
+
+.radioLabel {
+  cursor: pointer;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  font-size: 16px;
+  color: #fff; // Белый текст, как на изображении
+}
+
+.radioInput {
+  display: none; // Скрываем стандартный input
+}
+
+.radioCustom {
+  position: relative;
+
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: transparent;
+  border: 2px solid #fff; // Белая обводка, как на изображении
+  border-radius: 50%; // Круглая форма
+
+  transition: background-color 0.3s;
+}
+
+.radioInput:checked + .radioCustom::after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #fff; // Белая точка внутри при выборе
+  border-radius: 50%;
+}
+
+.radioLabel:hover .radioCustom {
+  border-color: #ccc; // Легкий эффект при наведении
+}
+
+.typeLabel > p {
+  font: var(--font-text-l);
+  font-weight: 600;
+  color: #3e4a39;
+}

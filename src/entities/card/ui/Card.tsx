@@ -4,9 +4,11 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { VStack } from "@/shared/ui/Stack";
 import { ICard } from "@/shared/api/cards/types";
 import { Text } from "@/shared/ui/Text";
-import cls from "./Card.module.scss";
 import { Slider } from "./slider/Slider";
+import { AppLink } from "@/shared/ui/AppLink";
+import { getRouteForm } from "@/shared/const/router";
 
+import cls from "./Card.module.scss";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
@@ -18,22 +20,37 @@ export const Card = memo((props: CardProps) => {
     const { className } = props;
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleToggleVisibleModal = () => setIsOpen((prev) => !prev)
+    const handleToggleVisibleModal = () => setIsOpen((prev) => !prev);
 
     return (
         <>
-            <Slider images={props.Images} isOpen={isOpen} handleChangeVisibility={handleToggleVisibleModal}/>
-            <VStack gap="16" className={classNames(cls.Card, {}, [className])} onClick={handleToggleVisibleModal}>
-                
-                <div className={cls.container}>
-                    <img
-                        src={process.env.NEXT_PUBLIC_IMAGE_URL + props.Images[0].url}
-                        alt={props.Images[0].name}
-                    />
-                </div>
-                <Text title={props.Name} size="s" />
-                
-                <Text className={cls.btn} text="Смотреть проект" />
+            <Slider
+                images={props.Images}
+                isOpen={isOpen}
+                handleChangeVisibility={handleToggleVisibleModal}
+            />
+            <VStack gap="16" className={classNames(cls.Card, {}, [className])}>
+                <VStack gap="16" onClick={handleToggleVisibleModal}>
+                    <div className={cls.container}>
+                        <img
+                            src={
+                                process.env.NEXT_PUBLIC_IMAGE_URL +
+                                props.Images[0].url
+                            }
+                            alt={props.Images[0].name}
+                        />
+                    </div>
+                    <Text title={props.Name} size="s" />
+                </VStack>
+                <AppLink
+                    href={getRouteForm()}
+                    style={{
+                        color: "var(--secondary-color)",
+                        fontWeight: "400",
+                    }}
+                >
+                    Хочу такую
+                </AppLink>
             </VStack>
         </>
     );

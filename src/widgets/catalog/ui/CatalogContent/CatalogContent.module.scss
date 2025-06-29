@@ -13,27 +13,17 @@
     gap: 24px;
     width: 100%;
 
-    .skeletonTitle {
-        flex-shrink: 0;
-        align-self: center;
-
-        width: 140px;
-        height: 26px;
-
-        background-color: rgb(236 235 235);
-    }
-
     .skeletonImage{
         width: 100%;
         height: 100%;
-        padding-bottom: 56.25%;
+        padding-bottom: 130%;
         background-color: rgb(236 235 235);
     }   
 
     .skeletonButton{
         flex-shrink: 0;
-        width: 116px;
-        height: 14px;
+        width: 146px;
+        height: 24px;
         background-color: rgb(236 235 235);
     }
 }

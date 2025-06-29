@@ -5,3 +5,4 @@ export const getRouteStagesWork = () => "/#advantages";
 
 export const getRouteCatalog = () => "/#catalog";
 export const getRouteForbidden = () => "/forbidden";
+export const getRouteForm = () => "/#form";
