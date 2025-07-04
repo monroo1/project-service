@@ -55,24 +55,17 @@ export const SendForm = memo((props: SendFormProps) => {
     });
 
     const validateInputs = () => {
-        const isValidName = name.length >= 2;
+        const isInvalidName = 2 <= name.length;
         const isValidPhone = !rePhone.test(phone);
 
-        isValidName ? setNameIsValid(true) : setNameIsValid(false);
+        isInvalidName ? setNameIsValid(false) : setNameIsValid(true);
         isValidPhone ? setPhoneIsValid(true) : setPhoneIsValid(false);
 
-        return isValidPhone || isValidName ? false : true;
+        return isValidPhone || !isInvalidName ? false : true;
     };
 
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
-        console.log({
-            Name: name,
-            Phone: phone,
-            Description: description,
-            FeedbackType: feedbackType,
-        });
 
         return validateInputs() && mutate();
     };
