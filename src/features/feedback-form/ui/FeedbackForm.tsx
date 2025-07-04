@@ -16,7 +16,6 @@ interface SendFormProps {
     className?: string;
 }
 
-const reName = /^[а-яА-ЯёЁa-zA-Z0-9]+$/;
 const rePhone = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/;
 
 export const SendForm = memo((props: SendFormProps) => {
@@ -56,7 +55,7 @@ export const SendForm = memo((props: SendFormProps) => {
     });
 
     const validateInputs = () => {
-        const isValidName = !reName.test(name);
+        const isValidName = name.length >= 2;
         const isValidPhone = !rePhone.test(phone);
 
         isValidName ? setNameIsValid(true) : setNameIsValid(false);
